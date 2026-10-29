@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chittinedi Dinesh | Data Analyst & BI Specialist</title>
+  <meta name="description" content="Portfolio of Chittinedi Dinesh - Data Analyst skilled in SQL, Python, Power BI, and Advanced Excel. Explore real-world projects, interactive data analytics, and case studies.">
+  <meta name="author" content="Chittinedi Dinesh">
+  <meta name="keywords" content="Data Analyst, Business Intelligence, SQL, Python, Power BI, DAX, Excel, EDA, Chittinedi Dinesh, Portfolio">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dinesh-ch3.github.io/">
+  <meta property="og:title" content="Chittinedi Dinesh | Data Analyst & BI Specialist">
+  <meta property="og:description" content="Portfolio of Chittinedi Dinesh - Transforming multi-source complex data into actionable business intelligence.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/289638108?v=4">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f172a%22/><text y=%2268%22 x=%2250%22 font-size=%2255%22 font-family=%22system-ui,sans-serif%22 font-weight=%22800%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>CD</text></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons & Chart.js for Interactive Visualizations -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-badge">CD</span>
+        <span class="brand-text">Dinesh<span class="text-accent">.data</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#playground" class="nav-link">Live Data Lab</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <a href="Dinesh_Chittinedi_Data_Analyst_Resume.pdf" download class="btn btn-sm btn-outline">
+          <i data-lucide="file-down" class="btn-icon-svg"></i>
+          <span>Resume</span>
+        </a>
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+      </div>
+
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav">
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#playground" class="mobile-link">Live Data Lab</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="Dinesh_Chittinedi_Data_Analyst_Resume.pdf" download class="btn btn-outline w-full mt-2">
+          <i data-lucide="file-down" class="btn-icon-svg"></i> Download Resume
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-status">
+          <span class="pulse-dot"></span>
+          <span>Available for Immediate Full-Time Roles (40 hrs/wk)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Translating Complex Data into <span class="gradient-text">Measurable Growth</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong class="text-white">Chittinedi Dinesh</strong> — a results-driven Data Analyst specializing in 
+          <strong>SQL data wrangling</strong>, <strong>Python (Pandas, NumPy)</strong>, 
+          <strong>Power BI KPI modeling</strong>, and <strong>Excel actuarial analytics</strong>. 
+          Proven track record of structuring and analyzing 10,000+ transactional records to optimize operational efficiency.
+        </p>
+
+        <!-- Key Metrics Strip -->
+        <div class="hero-metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">10,000+</span>
+            <span class="metric-label">Healthcare Records Cleaned & Analyzed</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">~280%</span>
+            <span class="metric-label">Claim Variance Uncovered (Actuarial EDA)</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">1,500+</span>
+            <span class="metric-label">Product Specs Standardized</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Data Integrity & Validation Standard</span>
+          </div>
+        </div>
+
+        <!-- Hero CTAs -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-lg btn-primary">
+            <span>Explore Case Studies</span>
+            <i data-lucide="arrow-down" class="btn-icon-svg"></i>
+          </a>
+          <a href="Dinesh_Chittinedi_Data_Analyst_Resume.pdf" download class="btn btn-lg btn-secondary">
+            <i data-lucide="download" class="btn-icon-svg"></i>
+            <span>Download Resume PDF</span>
+          </a>
+          <div class="social-quick-links">
+            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://linkedin.com/in/chittinedi-dinesh" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="mailto:dinesh435ch@gmail.com" class="social-icon-btn" title="Email Direct">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Real Live Terminal / Query Engine Preview -->
+      <div class="hero-terminal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">dinesh_analytics_pipeline.sql</span>
+          <span class="terminal-badge">PostgreSQL / MySQL</span>
+        </div>
+        <div class="terminal-body">
+          <pre class="code-font"><span class="c-comment">-- Hospital Admissions & Capacity Intelligence</span>
+<span class="c-keyword">WITH</span> AdmissionMetrics <span class="c-keyword">AS</span> (
+  <span class="c-keyword">SELECT</span> 
+    department,
+    <span class="c-func">COUNT</span>(patient_id) <span class="c-keyword">AS</span> total_admissions,
+    <span class="c-func">ROUND</span>(<span class="c-func">AVG</span>(discharge_date - admission_date), <span class="c-num">1</span>) <span class="c-keyword">AS</span> avg_stay_days,
+    <span class="c-func">DENSE_RANK</span>() <span class="c-keyword">OVER</span>(<span class="c-keyword">ORDER BY</span> <span class="c-func">COUNT</span>(patient_id) <span class="c-keyword">DESC</span>) <span class="c-keyword">AS</span> dept_rank
+  <span class="c-keyword">FROM</span> healthcare_records
+  <span class="c-keyword">WHERE</span> discharge_date <span class="c-keyword">IS NOT NULL</span>
+  <span class="c-keyword">GROUP BY</span> department
+)
+<span class="c-keyword">SELECT</span> department, total_admissions, avg_stay_days
+<span class="c-keyword">FROM</span> AdmissionMetrics
+<span class="c-keyword">WHERE</span> dept_rank &lt;= <span class="c-num">5</span>;
+
+<span class="c-output">/* Execution Result: 10,000+ records processed in 42ms
+   ICU Bed Turn: 4.8d avg | ER Inflow Peak: +34% Weekends */</span></pre>
+        </div>
+        <div class="terminal-footer">
+          <div class="terminal-stat">
+            <i data-lucide="check-circle" class="text-success stat-icon"></i>
+            <span>Query Optimized (Indexed Partitioning)</span>
+          </div>
+          <div class="terminal-stat">
+            <i data-lucide="zap" class="text-accent stat-icon"></i>
+            <span>DAX Star Schema Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Featured Projects & Case Studies -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Analytical Portfolio</span>
+        <h2 class="section-title">Production Case Studies</h2>
+        <p class="section-desc">
+          Every project represents an end-to-end data pipeline: from raw, messy multi-source ingestion to statistical modeling and stakeholder-ready executive dashboards.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+        <button class="filter-btn" data-filter="sql">SQL & Relational</button>
+        <button class="filter-btn" data-filter="python">Python & EDA</button>
+        <button class="filter-btn" data-filter="powerbi">Power BI & BI</button>
+        <button class="filter-btn" data-filter="excel">Excel & Actuarial</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: SQL Healthcare -->
+        <article class="project-card" data-category="sql powerbi">
+          <div class="card-meta">
+            <span class="category-pill sql-pill">SQL & Power BI</span>
+            <span class="records-tag">10,000+ Records</span>
+          </div>
+          <h3 class="card-title">Hospital Patient Admissions & Operational Performance Dashboard</h3>
+          <p class="card-summary">
+            End-to-end clinical data engineering and performance intelligence. Cleaned, normalized, and modeled over 10,000 healthcare records using advanced SQL (CTEs, Window Functions, multi-table JOINs). Engineered interactive Power BI dashboard tracking ALOS, department bed occupancy, and peak admission bottlenecks.
+          </p>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Normalized disparate tables & eliminated duplicate patient discharge records</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Formulated DAX metrics for Average Length of Stay (ALOS) & bed turnover</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Designed visual capacity alerts enabling predictive staffing allocation</span>
+            </div>
+          </div>
+
+          <div class="card-tech-stack">
+            <span class="tech-tag">SQL (MySQL)</span>
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">DAX</span>
+            <span class="tech-tag">Data Modeling</span>
+            <span class="tech-tag">ETL & Data Hygiene</span>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline open-case-study" data-project="hospital">
+              <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
+            </button>
+            <a href="https://github.com/dinesh-ch3/sql-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Python Smartphone EDA -->
+        <article class="project-card" data-category="python">
+          <div class="card-meta">
+            <span class="category-pill python-pill">Python & Pandas</span>
+            <span class="records-tag">1,500+ Devices</span>
+          </div>
+          <h3 class="card-title">Smartphone Pricing & Hardware Specification Market Analysis</h3>
+          <p class="card-summary">
+            Exploratory Data Analysis and pricing elasticity study. Standardized messy device records across global manufacturers. Automated regex-based currency parsing (₹/INR), null imputation, and feature engineering. Conducted multivariate correlation analysis to isolate primary consumer price drivers.
+          </p>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Resolved complex currency formatting anomalies, commas, and whitespace noise</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Identified RAM capacity & battery mAh tiers as dominant determinants of mid-range pricing</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Plotted correlation heatmaps, boxplots, and regression trends with Seaborn/Matplotlib</span>
+            </div>
+          </div>
+
+          <div class="card-tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Seaborn</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">EDA</span>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline open-case-study" data-project="smartphone">
+              <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
+            </button>
+            <a href="https://github.com/dinesh-ch3/pandas-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Excel Insurance Actuarial -->
+        <article class="project-card" data-category="excel">
+          <div class="card-meta">
+            <span class="category-pill excel-pill">Advanced Excel</span>
+            <span class="records-tag">1,300+ Claims</span>
+          </div>
+          <h3 class="card-title">Health Insurance Billing & Actuarial Risk Factor Modeling</h3>
+          <p class="card-summary">
+            Rigorous statistical risk audit on 1,300+ healthcare policyholder billing records in Microsoft Excel. Utilized nested lookup formulas, data validation rules, and dynamic multi-dimensional Pivot Tables to measure demographic claim variance and cost escalations.
+          </p>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Uncovered that smoking status drives ~280% higher average claims across age cohorts</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Constructed nested models using INDEX/MATCH, XLOOKUP, and conditional risk scoring</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Implemented automated outlier audits preventing underwriting premium miscalculations</span>
+            </div>
+          </div>
+
+          <div class="card-tech-stack">
+            <span class="tech-tag">Microsoft Excel</span>
+            <span class="tech-tag">Pivot Tables</span>
+            <span class="tech-tag">XLOOKUP / INDEX-MATCH</span>
+            <span class="tech-tag">Statistical Modeling</span>
+            <span class="tech-tag">Risk Profiling</span>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline open-case-study" data-project="insurance">
+              <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
+            </button>
+            <a href="https://github.com/dinesh-ch3/excel-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Power BI Coffee Chain -->
+        <article class="project-card" data-category="powerbi">
+          <div class="card-meta">
+            <span class="category-pill powerbi-pill">Power BI & BI</span>
+            <span class="records-tag">Retail Analytics</span>
+          </div>
+          <h3 class="card-title">Coffee Shop Chain Executive Revenue & Operations Dashboard</h3>
+          <p class="card-summary">
+            Commercial business intelligence suite built in Power BI for a multi-store coffee chain. Extracted and transformed raw point-of-sale data using Power Query, designed a star-schema analytical model, and produced an executive dashboard tracking hourly sales peaks, product margins, and customer footfall.
+          </p>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Architected star schema data model connecting sales facts with store/product dimensions</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Authored custom DAX measures for Year-over-Year (YoY) growth and basket size</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Generated hourly velocity heatmaps optimizing barista staffing schedules</span>
+            </div>
+          </div>
+
+          <div class="card-tech-stack">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">DAX Measures</span>
+            <span class="tech-tag">Power Query (M)</span>
+            <span class="tech-tag">Star Schema</span>
+            <span class="tech-tag">Retail Analytics</span>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline open-case-study" data-project="powerbi-coffee">
+              <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
+            </button>
+            <a href="https://github.com/dinesh-ch3/power-bi_project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Tata GenAI Simulation -->
+        <article class="project-card" data-category="sql python">
+          <div class="card-meta">
+            <span class="category-pill corporate-pill">Corporate Simulation</span>
+            <span class="records-tag">Tata & Forage</span>
+          </div>
+          <h3 class="card-title">GenAI-Powered Delinquency Modeling & Collections Strategy</h3>
+          <p class="card-summary">
+            Enterprise risk simulation evaluating credit delinquency curves and customer risk strata. Formulated prioritized outreach tiers, segmented high-risk borrower buckets, and synthesized strategic executive decks delivering actionable collections recommendations to senior leadership.
+          </p>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Segmented loan delinquency clusters to identify early-stage default indicators</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Designed dynamic customer outreach matrix minimizing operational outreach cost</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check" class="highlight-icon"></i>
+              <span>Authored executive business summary and slide presentation for stakeholder review</span>
+            </div>
+          </div>
+
+          <div class="card-tech-stack">
+            <span class="tech-tag">Risk Profiling</span>
+            <span class="tech-tag">Delinquency Modeling</span>
+            <span class="tech-tag">Executive Reporting</span>
+            <span class="tech-tag">GenAI Strategy</span>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline open-case-study" data-project="tata">
+              <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
+            </button>
+            <span class="verified-badge">
+              <i data-lucide="award" class="text-accent"></i> Verified Simulation
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Section: Live Data Lab & Query Playground -->
+  <section id="playground" class="section playground-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Proof-of-Skill</span>
+        <h2 class="section-title">Live Data & Analytics Lab</h2>
+        <p class="section-desc">
+          Test drive live analytical queries and watch the data visualizer update instantly. Real datasets, real logic, no static mockups.
+        </p>
+      </div>
+
+      <div class="lab-workspace">
+        <!-- Lab Query Selector Sidebar -->
+        <div class="lab-controls">
+          <div class="lab-control-header">
+            <i data-lucide="database" class="text-accent"></i>
+            <span>Select Scenario Query</span>
+          </div>
+
+          <button class="query-btn active" data-scenario="alos">
+            <div class="query-btn-title">Hospital Stay Duration by Dept</div>
+            <div class="query-btn-sub">SQL CTE • 10,000+ Records • ALOS Metric</div>
+          </button>
+
+          <button class="query-btn" data-scenario="insurance">
+            <div class="query-btn-title">Insurance Claims: Smokers vs Non-Smokers</div>
+            <div class="query-btn-sub">Actuarial Variance • ~280% Gap • Cost Distribution</div>
+          </button>
+
+          <button class="query-btn" data-scenario="smartphone">
+            <div class="query-btn-title">Smartphone Pricing vs RAM Tiers</div>
+            <div class="query-btn-sub">Python Pandas EDA • 1,500 Devices • Price Drivers</div>
+          </button>
+
+          <button class="query-btn" data-scenario="coffee">
+            <div class="query-btn-title">Coffee Shop Hourly Sales Velocity</div>
+            <div class="query-btn-sub">Power BI DAX • Peak Inflow Heatmap</div>
+          </button>
+
+          <div class="lab-tip-box">
+            <i data-lucide="info" class="lab-tip-icon"></i>
+            <span>Click any query scenario above to run the analysis, inspect the underlying code, and visualize the findings dynamically.</span>
+          </div>
+        </div>
+
+        <!-- Lab Output Display -->
+        <div class="lab-display">
+          <!-- Code Inspector Tab Bar -->
+          <div class="lab-tabs">
+            <button class="lab-tab active" data-tab="viz">
+              <i data-lucide="bar-chart-2"></i> Visual Analytics
+            </button>
+            <button class="lab-tab" data-tab="code">
+              <i data-lucide="code-2"></i> Underlying Code (SQL / Python / DAX)
+            </button>
+            <button class="lab-tab" data-tab="data">
+              <i data-lucide="table"></i> Summary Table
+            </button>
+          </div>
+
+          <!-- Tab Content 1: Visualization -->
+          <div class="tab-pane active" id="pane-viz">
+            <div class="viz-header">
+              <div>
+                <h4 class="viz-title" id="vizTitle">Department-Wise Average Length of Stay (ALOS)</h4>
+                <p class="viz-subtitle" id="vizSubtitle">Metric derived from normalized inpatient admission & discharge timestamps.</p>
+              </div>
+              <div class="viz-stat-badge" id="vizStatBadge">
+                <span class="viz-badge-label">Highest ALOS</span>
+                <span class="viz-badge-val" id="vizStatVal">ICU: 7.4 Days</span>
+              </div>
+            </div>
+
+            <div class="chart-wrapper">
+              <canvas id="liveChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Tab Content 2: Code -->
+          <div class="tab-pane" id="pane-code">
+            <div class="code-box-header">
+              <span id="codeLangLabel">SQL Query</span>
+              <button class="btn-copy-code" id="copyCodeBtn" title="Copy Code">
+                <i data-lucide="copy"></i> Copy Snippet
+              </button>
+            </div>
+            <pre class="code-font"><code id="codeSnippetText"></code></pre>
+          </div>
+
+          <!-- Tab Content 3: Data Table -->
+          <div class="tab-pane" id="pane-data">
+            <div class="table-responsive">
+              <table class="data-table" id="summaryDataTable">
+                <thead id="summaryTableHead"></thead>
+                <tbody id="summaryTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Architecture -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Competency Stack</span>
+        <h2 class="section-title">Technical Skills & Tooling</h2>
+        <p class="section-desc">
+          Structured around modern enterprise analytics workflows: querying, transforming, modeling, and executive storytelling.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skill Block 1: SQL & Databases -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper sql-bg">
+              <i data-lucide="database"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">SQL & Database Systems</h3>
+              <p class="skill-cat-sub">High-efficiency data extraction & pipeline hygiene</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>Relational DBs:</strong> MySQL, PostgreSQL, SQL Server</li>
+            <li><strong>Advanced Querying:</strong> CTEs, Subqueries, Multi-Table JOINs</li>
+            <li><strong>Analytical Functions:</strong> Window Functions (RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG)</li>
+            <li><strong>Data Cleansing:</strong> NULL Handling, Deduplication, String Manipulation</li>
+            <li><strong>Optimization:</strong> Indexing Strategy, Query Execution Plan Analysis</li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 2: Python Data Science -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper python-bg">
+              <i data-lucide="terminal"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Python Analytics & EDA</h3>
+              <p class="skill-cat-sub">Statistical computation & automated wrangling</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>Core Libraries:</strong> Pandas, NumPy</li>
+            <li><strong>Data Visualization:</strong> Seaborn, Matplotlib</li>
+            <li><strong>EDA Workflow:</strong> Correlation Matrices, Distribution Outlier Removal</li>
+            <li><strong>Data Hygiene:</strong> Regex Extraction, Type Casting, Missing Imputation</li>
+            <li><strong>Feature Engineering:</strong> Binning, One-Hot Encoding, Categorical Normalization</li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 3: Power BI & Business Intelligence -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper powerbi-bg">
+              <i data-lucide="layout-dashboard"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Power BI & Business Intelligence</h3>
+              <p class="skill-cat-sub">Interactive decision engines & executive dashboards</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>DAX Mastery:</strong> CALCULATE, FILTER, RELATED, Time Intelligence (YTD/YoY)</li>
+            <li><strong>Data Modeling:</strong> Star Schema, Snowflake Schema, Relationship Cardinality</li>
+            <li><strong>Power Query (M):</strong> ETL Data Transformations & Pipeline Shaping</li>
+            <li><strong>Dashboard UX:</strong> KPI Cards, Bookmarks, Drill-Throughs, Custom Tooltips</li>
+            <li><strong>Storytelling:</strong> Executive Summary Architecture & Operational Health Alerts</li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 4: Microsoft Excel -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper excel-bg">
+              <i data-lucide="sheet"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Advanced Excel & Modeling</h3>
+              <p class="skill-cat-sub">Actuarial tables, nested formulas & fast auditing</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>Nested Formulas:</strong> XLOOKUP, INDEX/MATCH, SUMIFS, COUNTIFS, IF/IFS</li>
+            <li><strong>Summary Engines:</strong> Dynamic Pivot Tables & Pivot Charts</li>
+            <li><strong>Data Quality:</strong> Conditional Formatting Rules, Data Validation Dropdowns</li>
+            <li><strong>Financial & Statistical:</strong> Scenario Manager, What-If Analysis, Trendlines</li>
+            <li><strong>Reporting:</strong> Executive KPI Trackers & Automated Scorecards</li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 5: Developer Tools & Ecosystem -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper tools-bg">
+              <i data-lucide="wrench"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Developer Tools & Workflow</h3>
+              <p class="skill-cat-sub">Version control, environments & reproducibility</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>Version Control:</strong> Git, GitHub (Branching, Commit Hygiene, PRs)</li>
+            <li><strong>Environments:</strong> VS Code, Jupyter Notebook, Google Colab</li>
+            <li><strong>Formats:</strong> CSV, JSON, Parquet, Excel (XLSX), SQL Dumps</li>
+            <li><strong>Reporting:</strong> Markdown, Technical Documentation, Executive Slidedecks</li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 6: Core Analytical Mindset -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrapper method-bg">
+              <i data-lucide="brain"></i>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Analytical Mindset</h3>
+              <p class="skill-cat-sub">Translating numbers into commercial bottom-line impact</p>
+            </div>
+          </div>
+          <ul class="skill-items-list">
+            <li><strong>Root Cause Analysis:</strong> Hypothesis Testing & Metric Decomposition</li>
+            <li><strong>KPI Architecture:</strong> Defining North Star & Guardrail Operational Metrics</li>
+            <li><strong>Stakeholder Communication:</strong> Bridging Technical Insights to Non-Tech Leaders</li>
+            <li><strong>Speed & Rigor:</strong> Zero tolerance for calculation mistakes or skewed data</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience & Education Section -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career & Credentials</span>
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="section-desc">
+          Professional experience, formal academic grounding in Computer Science, and verified corporate simulations.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">AI Data Analytics Intern</h3>
+                <span class="timeline-company">InAmigos Foundation</span>
+                <span class="timeline-badge">Remote • Performance Certified</span>
+              </div>
+              <span class="timeline-period">Oct 2026 – Oct 2026</span>
+            </div>
+            <p class="timeline-desc">
+              Conducted exploratory data analysis (EDA) and analytical data validation across multi-source datasets using Python (Pandas, NumPy) and SQL. Built structured KPI reporting models and visual dashboards to evaluate organizational performance trends, operational bottlenecks, and program outcomes. Synthesized raw findings into actionable stakeholder summaries, earning an official performance certification (Reg No: U85300CT2020NPL010641 | CSR: CSR00083159).
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Python (Pandas)</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">KPI Modeling</span>
+              <span class="tech-tag">Stakeholder Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Simulation -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">GenAI Powered Data Analytics Simulation</h3>
+                <span class="timeline-company">Tata & Forage</span>
+                <span class="timeline-badge">Corporate Project Simulation</span>
+              </div>
+              <span class="timeline-period">Oct 2026</span>
+            </div>
+            <p class="timeline-desc">
+              Completed real-world corporate problem-solving simulation focusing on credit delinquency modeling, customer risk segmentation, and AI-assisted collections optimization. Drafted executive presentation decks and risk policy recommendations for credit management leaders.
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Delinquency Curves</span>
+              <span class="tech-tag">Risk Profiling</span>
+              <span class="tech-tag">Executive Slidedecks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education 1: MCA -->
+        <div class="timeline-item">
+          <div class="timeline-marker edu-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Master of Computer Applications (MCA)</h3>
+                <span class="timeline-company">KGRL College, Bhimavaram</span>
+                <span class="timeline-badge badge-success">Flexible Schedule • Immediate Full-Time 40 hrs/wk</span>
+              </div>
+              <span class="timeline-period">Aug 2026 – Present (Expected 2028)</span>
+            </div>
+            <p class="timeline-desc">
+              Advanced curriculum in Database Management Systems (DBMS), Advanced Data Structures, Cloud Computing, and Enterprise Software Systems. Coursework structured with high schedule flexibility, allowing immediate onboarding for full-time employment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 2: B.Sc. -->
+        <div class="timeline-item">
+          <div class="timeline-marker edu-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Bachelor of Science (B.Sc.) in Computer Science</h3>
+                <span class="timeline-company">BV Raju College, Bhimavaram (Adikavi Nannaya University)</span>
+              </div>
+              <span class="timeline-period">Aug 2021 – Nov 2024</span>
+            </div>
+            <p class="timeline-desc">
+              Graduated with strong foundations in relational database design, object-oriented programming, algorithmic thinking, and statistical computing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 3: Intermediate -->
+        <div class="timeline-item">
+          <div class="timeline-marker edu-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Intermediate (+2 MPC — Mathematics, Physics, Chemistry)</h3>
+                <span class="timeline-company">Narayana Junior College, Bhimavaram</span>
+                <span class="timeline-badge">Score: 74.4%</span>
+              </div>
+              <span class="timeline-period">Jun 2019 – Mar 2021</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications Block -->
+      <div class="certifications-box">
+        <h3 class="cert-title">
+          <i data-lucide="shield-check" class="text-accent"></i> Verified Certifications
+        </h3>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-issuer">Tata & Forage</div>
+            <div class="cert-name">GenAI Powered Data Analytics Job Simulation</div>
+            <div class="cert-detail">Risk Profiling, Delinquency Modeling & Collections Strategy (Oct 2026)</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-issuer">InAmigos Foundation</div>
+            <div class="cert-name">AI Data Analytics Internship Performance Certificate</div>
+            <div class="cert-detail">Reg: U85300CT2020NPL010641 | CSR: CSR00083159 (Oct 2026)</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-issuer">Udemy</div>
+            <div class="cert-name">Data Analyst Master Certification</div>
+            <div class="cert-detail">Comprehensive training in SQL, Power BI, Excel, Pandas, NumPy, Seaborn & ML Fundamentals</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-info">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="contact-title">Ready to Bring Rigor to Your Data Team</h2>
+          <p class="contact-subtitle">
+            I am actively interviewing for full-time <strong>Data Analyst</strong>, <strong>Business Intelligence Analyst</strong>, and <strong>Junior Analytics Engineer</strong> roles. Open to remote opportunities across India & worldwide, as well as on-site positions.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <span class="contact-label">Email Address</span>
+                <a href="mailto:dinesh435ch@gmail.com" class="contact-val">dinesh435ch@gmail.com</a>
+              </div>
+              <button class="btn-copy-sm" id="copyEmailBtn" title="Copy Email">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <span class="contact-label">Direct Phone / WhatsApp</span>
+                <a href="tel:+917780648383" class="contact-val">+91 7780648383</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Andhra Pradesh, India (Available for Relocation / Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-row">
+            <a href="https://linkedin.com/in/chittinedi-dinesh" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i data-lucide="linkedin" class="btn-icon-svg"></i> LinkedIn Profile
+            </a>
+            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i data-lucide="github" class="btn-icon-svg"></i> GitHub Repositories
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-action-box">
+          <div class="hiring-perks-box">
+            <h3 class="hiring-box-title">Why Recruiters Hire Dinesh</h3>
+            <ul class="hiring-perks-list">
+              <li>
+                <i data-lucide="check-circle-2" class="text-success"></i>
+                <span><strong>No Training Ramp-up:</strong> Fluent in real SQL CTEs, window functions, and complex JOINs.</span>
+              </li>
+              <li>
+                <i data-lucide="check-circle-2" class="text-success"></i>
+                <span><strong>Business-First Lens:</strong> Connects technical metrics directly to profit, capacity, and operational cost.</span>
+              </li>
+              <li>
+                <i data-lucide="check-circle-2" class="text-success"></i>
+                <span><strong>Immediate Availability:</strong> 0 days notice period, ready for immediate 40 hrs/week full-time onboarding.</span>
+              </li>
+              <li>
+                <i data-lucide="check-circle-2" class="text-success"></i>
+                <span><strong>Relentless Accuracy:</strong> Methodical data auditing with zero tolerance for corrupted assumptions.</span>
+              </li>
+            </ul>
+
+            <div class="direct-email-cta">
+              <a href="mailto:dinesh435ch@gmail.com?subject=Job%20Opportunity%20-%20Data%20Analyst%20Role&body=Hi%20Dinesh,%0A%0AWe%20reviewed%20your%20data%20analyst%20portfolio%20and%20would%20love%20to%20discuss%20an%20opportunity%20with%20our%20team.%0A%0ABest%20regards," class="btn btn-lg btn-primary w-full">
+                <i data-lucide="send" class="btn-icon-svg"></i>
+                <span>Send Direct Interview Invite</span>
+              </a>
+              <span class="email-subtext">Usually responds within 2-4 hours.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Chittinedi Dinesh</span>
+        <span class="footer-copy">© 2026. Handcrafted with modern semantic web standards. Hosted on GitHub Pages.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/chittinedi-dinesh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="Dinesh_Chittinedi_Data_Analyst_Resume.pdf" download>Resume PDF</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case Study Modal (Deep Dive) -->
+  <div class="modal-backdrop" id="caseStudyModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
