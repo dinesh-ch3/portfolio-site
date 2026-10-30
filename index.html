@@ -59,7 +59,7 @@
         <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
       </div>
 
-      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
         <i data-lucide="menu"></i>
       </button>
     </div>
@@ -508,7 +508,7 @@
             </div>
 
             <div class="chart-wrapper">
-              <canvas id="liveChart"></canvas>
+              <canvas id="liveChart" role="img" aria-label="Interactive visual analytics chart"></canvas>
             </div>
           </div>
 
@@ -919,9 +919,9 @@
   </footer>
 
   <!-- Case Study Modal (Deep Dive) -->
-  <div class="modal-backdrop" id="caseStudyModal">
+  <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal" title="Close modal">
         <i data-lucide="x"></i>
       </button>
       <div class="modal-body" id="modalBody">

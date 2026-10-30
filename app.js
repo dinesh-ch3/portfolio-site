@@ -36,16 +36,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
   
+  function updateMobileMenuIcon(isOpen) {
+    if (!mobileMenuBtn) return;
+    mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    mobileMenuBtn.innerHTML = isOpen ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+    if (window.lucide) {
+      lucide.createIcons({ root: mobileMenuBtn });
+    }
+  }
+
   if (mobileMenuBtn && mobileDrawer) {
     mobileMenuBtn.addEventListener('click', () => {
       const isOpen = mobileDrawer.style.display === 'block';
       mobileDrawer.style.display = isOpen ? 'none' : 'block';
+      updateMobileMenuIcon(!isOpen);
     });
 
     // Close mobile drawer when clicking any link
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.style.display = 'none';
+        updateMobileMenuIcon(false);
       });
     });
   }
@@ -75,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------------------
-  // 4. Toast Notifications
+  // 4. Toast Notifications & Safe Clipboard Handling
   // -------------------------------------------------------------------------
   const toast = document.getElementById('toast');
   function showToast(message) {
@@ -87,15 +98,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2400);
   }
 
+  function copyTextToClipboard(text, successMsg) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text)
+        .then(() => showToast(successMsg))
+        .catch(() => fallbackCopyText(text, successMsg));
+    } else {
+      fallbackCopyText(text, successMsg);
+    }
+  }
+
+  function fallbackCopyText(text, successMsg) {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      const successful = document.execCommand('copy');
+      document.body.removeChild(textArea);
+      if (successful) {
+        showToast(successMsg);
+      } else {
+        showToast(text);
+      }
+    } catch (err) {
+      showToast(text);
+    }
+  }
+
   // Copy Email Button
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText('dinesh435ch@gmail.com').then(() => {
-        showToast('Email address copied: dinesh435ch@gmail.com');
-      }).catch(() => {
-        showToast('dinesh435ch@gmail.com');
-      });
+      copyTextToClipboard('dinesh435ch@gmail.com', 'Email address copied: dinesh435ch@gmail.com');
     });
   }
 
@@ -425,9 +464,7 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
   if (copyCodeBtn) {
     copyCodeBtn.addEventListener('click', () => {
       const code = document.getElementById('codeSnippetText').textContent;
-      navigator.clipboard.writeText(code).then(() => {
-        showToast('Code snippet copied to clipboard!');
-      });
+      copyTextToClipboard(code, 'Code snippet copied to clipboard!');
     });
   }
 
@@ -611,16 +648,19 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
   const modalBackdrop = document.getElementById('caseStudyModal');
   const modalBody = document.getElementById('modalBody');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
+  let lastFocusedElement = null;
 
   function openModal(projectId) {
     const cs = caseStudies[projectId];
     if (!cs || !modalBody || !modalBackdrop) return;
 
+    lastFocusedElement = document.activeElement;
+
     modalBody.innerHTML = `
       <div class="modal-header-meta">
         <span class="category-pill ${cs.tagClass}">${cs.category}</span>
       </div>
-      <h2 class="modal-title">${cs.title}</h2>
+      <h2 class="modal-title" id="modalTitle">${cs.title}</h2>
 
       <div class="modal-section">
         <div class="modal-section-title"><i data-lucide="compass"></i> Executive Overview</div>
@@ -653,7 +693,7 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
         <pre class="modal-code-block"><code>${escapeHtml(cs.snippet)}</code></pre>
       </div>
 
-      <div style="display: flex; gap: 0.75rem; margin-top: 2rem;">
+      <div class="modal-action-footer">
         <a href="${cs.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <i data-lucide="github"></i> View GitHub Repository
         </a>
@@ -671,13 +711,24 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
     }
 
     modalBackdrop.classList.add('open');
+    modalBackdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    // Focus close button for keyboard accessibility
+    if (modalCloseBtn) {
+      modalCloseBtn.focus();
+    }
   }
 
   function closeModal() {
     if (!modalBackdrop) return;
     modalBackdrop.classList.remove('open');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
   }
 
   function escapeHtml(string) {
