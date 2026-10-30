@@ -34,8 +34,13 @@
   <!-- Top Navigation Header -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="#hero" class="brand-logo">
-        <span class="logo-badge">CD</span>
+      <a href="#hero" class="brand-logo" aria-label="Dinesh Chittinedi Portfolio Home">
+        <span class="logo-badge">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block; vertical-align:middle; margin-right:3px;">
+            <path d="M3 3v18h18"/>
+            <path d="M7 16l4-5 4 3 6-7"/>
+          </svg>CD
+        </span>
         <span class="brand-text">Dinesh<span class="text-accent">.data</span></span>
       </a>
 
@@ -59,7 +64,7 @@
         <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
       </div>
 
-      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
         <i data-lucide="menu"></i>
       </button>
     </div>
@@ -130,15 +135,73 @@
             <span>Download Resume PDF</span>
           </a>
           <div class="social-quick-links">
-            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
-              <i data-lucide="github"></i>
+            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile" aria-label="GitHub Profile">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
             </a>
-            <a href="https://www.linkedin.com/in/dinesh-ch-7907052b5/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
-              <i data-lucide="linkedin"></i>
+            <a href="https://www.linkedin.com/in/dinesh-ch-7907052b5/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24"/>
+              </svg>
             </a>
-            <a href="mailto:dinesh435ch@gmail.com" class="social-icon-btn" title="Email Direct">
+            <a href="mailto:dinesh435ch@gmail.com" class="social-icon-btn" title="Email Direct" aria-label="Email Direct">
               <i data-lucide="mail"></i>
             </a>
+          </div>
+        </div>
+
+        <!-- Core Toolkit & Ecosystem Logo Showcase -->
+        <div class="hero-tech-strip">
+          <span class="tech-strip-label">PRODUCTION TOOLKIT & STACK</span>
+          <div class="tech-strip-logos">
+            <div class="tech-pill-badge" title="Python (Pandas, NumPy, Seaborn)">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="#387eb8" d="M11.9 1.5c-4.1 0-3.8 1.8-3.8 1.8l.01 1.8h3.9v.6H4.8s-2.6.3-2.6 3.9 2.3 3.7 2.3 3.7h1.4v-1.9s-.1-2.3 2.3-2.3h3.9s2.2 0 2.2-2.2V3.7s.3-2.2-2.4-2.2zm-2.1 1.2c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+                <path fill="#ffe052" d="M12.1 22.5c4.1 0 3.8-1.8 3.8-1.8l-.01-1.8h-3.9v-.6h7.2s2.6-.3 2.6-3.9-2.3-3.7-2.3-3.7h-1.4v1.9s.1 2.3-2.3 2.3h-3.9s-2.2 0-2.2 2.2v3.2s-.3 2.2 2.4 2.2zm2.1-1.2c-.4 0-.7-.3-.7-.7s.3-.7.7-.7.7.3.7.7-.3.7-.7.7z"/>
+              </svg>
+              <span>Python</span>
+            </div>
+            <div class="tech-pill-badge" title="SQL (MySQL, PostgreSQL, CTEs, Window Functions)">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+              <span>SQL</span>
+            </div>
+            <div class="tech-pill-badge" title="Microsoft Power BI (DAX, Data Modeling)">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <rect x="3" y="12" width="4.5" height="9" rx="1.5" fill="#f2c811"/>
+                <rect x="9.5" y="7" width="4.5" height="14" rx="1.5" fill="#e0a800"/>
+                <rect x="16" y="3" width="4.5" height="18" rx="1.5" fill="#c68a00"/>
+              </svg>
+              <span>Power BI</span>
+            </div>
+            <div class="tech-pill-badge" title="Microsoft Excel (XLOOKUP, Pivot Tables, Scenario Modeling)">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="18" rx="3" fill="#107c41"/>
+                <path fill="#ffffff" d="M14.5 7h4v10h-4z" opacity="0.3"/>
+                <rect x="2" y="3" width="13" height="18" rx="2" fill="#185c37"/>
+                <path fill="#ffffff" d="M6.2 8.5h2.1l1.5 2.7 1.5-2.7h2.1l-2.6 4 2.7 4.3h-2.1l-1.6-2.9-1.6 2.9H6.2l2.7-4.3z"/>
+              </svg>
+              <span>Excel</span>
+            </div>
+            <div class="tech-pill-badge" title="Git & GitHub Version Control">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="#f05032" aria-hidden="true">
+                <path d="M21.6 10.9L13.1 2.4a2.2 2.2 0 0 0-3.1 0L7.6 4.8l3.9 3.9a2.6 2.6 0 0 1 3.3 3.3l3.8 3.8a2.6 2.6 0 0 1 3-5zm-9.8 4.2a1.6 1.6 0 0 1-1.6-1.6c0-.4.1-.7.3-1l-3.2-3.2c-.3.2-.6.3-1 .3a1.6 1.6 0 1 1 1.6-1.6c0 .4-.1.7-.3 1l3.2 3.2c.3-.2.6-.3 1-.3a1.6 1.6 0 0 1 1.6 1.6 1.6 1.6 0 0 1-1.6 1.6z"/>
+                <path d="M2.4 13.1l8.5 8.5c.8.8 2.2.8 3.1 0l2.4-2.4-14-14-2.4 2.4c-.8.9-.8 2.3 0 3.1z" opacity="0.8"/>
+              </svg>
+              <span>Git</span>
+            </div>
+            <div class="tech-pill-badge" title="Pandas & NumPy Scientific Analytics">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="#150458" d="M5.5 2h3v20h-3z" opacity="0.9"/>
+                <path fill="#e70488" d="M10.5 6h3v12h-3z"/>
+                <path fill="#00ffff" d="M15.5 10h3v12h-3z" opacity="0.8"/>
+              </svg>
+              <span>Pandas</span>
+            </div>
           </div>
         </div>
       </div>
@@ -249,7 +312,10 @@
               <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
             </button>
             <a href="https://github.com/dinesh-ch3/sql-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
-              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>View GitHub Repo</span>
             </a>
           </div>
         </article>
@@ -294,7 +360,10 @@
               <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
             </button>
             <a href="https://github.com/dinesh-ch3/pandas-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
-              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>View GitHub Repo</span>
             </a>
           </div>
         </article>
@@ -338,7 +407,10 @@
               <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
             </button>
             <a href="https://github.com/dinesh-ch3/excel-project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
-              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>View GitHub Repo</span>
             </a>
           </div>
         </article>
@@ -382,7 +454,10 @@
               <i data-lucide="eye" class="btn-icon-svg"></i> Deep Dive
             </button>
             <a href="https://github.com/dinesh-ch3/power-bi_project" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
-              <i data-lucide="github" class="btn-icon-svg"></i> View GitHub Repo
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>View GitHub Repo</span>
             </a>
           </div>
         </article>
@@ -508,7 +583,7 @@
             </div>
 
             <div class="chart-wrapper">
-              <canvas id="liveChart"></canvas>
+              <canvas id="liveChart" role="img" aria-label="Interactive visual analytics chart"></canvas>
             </div>
           </div>
 
@@ -553,8 +628,12 @@
         <!-- Skill Block 1: SQL & Databases -->
         <div class="skill-category-card">
           <div class="skill-card-header">
-            <div class="skill-icon-wrapper sql-bg">
-              <i data-lucide="database"></i>
+            <div class="skill-icon-wrapper sql-bg" title="SQL & Relational Databases">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
             </div>
             <div>
               <h3 class="skill-cat-title">SQL & Database Systems</h3>
@@ -573,8 +652,11 @@
         <!-- Skill Block 2: Python Data Science -->
         <div class="skill-category-card">
           <div class="skill-card-header">
-            <div class="skill-icon-wrapper python-bg">
-              <i data-lucide="terminal"></i>
+            <div class="skill-icon-wrapper python-bg" title="Python Analytics & EDA">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <path fill="#387eb8" d="M11.9 1.5c-4.1 0-3.8 1.8-3.8 1.8l.01 1.8h3.9v.6H4.8s-2.6.3-2.6 3.9 2.3 3.7 2.3 3.7h1.4v-1.9s-.1-2.3 2.3-2.3h3.9s2.2 0 2.2-2.2V3.7s.3-2.2-2.4-2.2zm-2.1 1.2c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+                <path fill="#ffe052" d="M12.1 22.5c4.1 0 3.8-1.8 3.8-1.8l-.01-1.8h-3.9v-.6h7.2s2.6-.3 2.6-3.9-2.3-3.7-2.3-3.7h-1.4v1.9s.1 2.3-2.3 2.3h-3.9s-2.2 0-2.2 2.2v3.2s-.3 2.2 2.4 2.2zm2.1-1.2c-.4 0-.7-.3-.7-.7s.3-.7.7-.7.7.3.7.7-.3.7-.7.7z"/>
+              </svg>
             </div>
             <div>
               <h3 class="skill-cat-title">Python Analytics & EDA</h3>
@@ -593,8 +675,12 @@
         <!-- Skill Block 3: Power BI & Business Intelligence -->
         <div class="skill-category-card">
           <div class="skill-card-header">
-            <div class="skill-icon-wrapper powerbi-bg">
-              <i data-lucide="layout-dashboard"></i>
+            <div class="skill-icon-wrapper powerbi-bg" title="Microsoft Power BI & DAX">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <rect x="3" y="12" width="4.5" height="9" rx="1.5" fill="#f2c811"/>
+                <rect x="9.5" y="7" width="4.5" height="14" rx="1.5" fill="#e0a800"/>
+                <rect x="16" y="3" width="4.5" height="18" rx="1.5" fill="#c68a00"/>
+              </svg>
             </div>
             <div>
               <h3 class="skill-cat-title">Power BI & Business Intelligence</h3>
@@ -613,8 +699,13 @@
         <!-- Skill Block 4: Microsoft Excel -->
         <div class="skill-category-card">
           <div class="skill-card-header">
-            <div class="skill-icon-wrapper excel-bg">
-              <i data-lucide="sheet"></i>
+            <div class="skill-icon-wrapper excel-bg" title="Microsoft Excel & Actuarial Modeling">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="18" rx="3" fill="#107c41"/>
+                <path fill="#ffffff" d="M14.5 7h4v10h-4z" opacity="0.3"/>
+                <rect x="2" y="3" width="13" height="18" rx="2" fill="#185c37"/>
+                <path fill="#ffffff" d="M6.2 8.5h2.1l1.5 2.7 1.5-2.7h2.1l-2.6 4 2.7 4.3h-2.1l-1.6-2.9-1.6 2.9H6.2l2.7-4.3z"/>
+              </svg>
             </div>
             <div>
               <h3 class="skill-cat-title">Advanced Excel & Modeling</h3>
@@ -633,8 +724,11 @@
         <!-- Skill Block 5: Developer Tools & Ecosystem -->
         <div class="skill-category-card">
           <div class="skill-card-header">
-            <div class="skill-icon-wrapper tools-bg">
-              <i data-lucide="wrench"></i>
+            <div class="skill-icon-wrapper tools-bg" title="Git, GitHub & Developer Workflow">
+              <svg class="tech-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="#f05032" aria-hidden="true">
+                <path d="M21.6 10.9L13.1 2.4a2.2 2.2 0 0 0-3.1 0L7.6 4.8l3.9 3.9a2.6 2.6 0 0 1 3.3 3.3l3.8 3.8a2.6 2.6 0 0 1 3-5zm-9.8 4.2a1.6 1.6 0 0 1-1.6-1.6c0-.4.1-.7.3-1l-3.2-3.2c-.3.2-.6.3-1 .3a1.6 1.6 0 1 1 1.6-1.6c0 .4-.1.7-.3 1l3.2 3.2c.3-.2.6-.3 1-.3a1.6 1.6 0 0 1 1.6 1.6 1.6 1.6 0 0 1-1.6 1.6z"/>
+                <path d="M2.4 13.1l8.5 8.5c.8.8 2.2.8 3.1 0l2.4-2.4-14-14-2.4 2.4c-.8.9-.8 2.3 0 3.1z" opacity="0.8"/>
+              </svg>
             </div>
             <div>
               <h3 class="skill-cat-title">Developer Tools & Workflow</h3>
@@ -857,11 +951,17 @@
           </div>
 
           <div class="contact-social-row">
-            <a href="https://www.linkedin.com/in/dinesh-ch-7907052b5/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <i data-lucide="linkedin" class="btn-icon-svg"></i> LinkedIn Profile
+            <a href="https://www.linkedin.com/in/dinesh-ch-7907052b5/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="LinkedIn Profile">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24"/>
+              </svg>
+              <span>LinkedIn Profile</span>
             </a>
-            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <i data-lucide="github" class="btn-icon-svg"></i> GitHub Repositories
+            <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="GitHub Repositories">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub Repositories</span>
             </a>
           </div>
         </div>
@@ -919,9 +1019,9 @@
   </footer>
 
   <!-- Case Study Modal (Deep Dive) -->
-  <div class="modal-backdrop" id="caseStudyModal">
+  <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal" title="Close modal">
         <i data-lucide="x"></i>
       </button>
       <div class="modal-body" id="modalBody">
