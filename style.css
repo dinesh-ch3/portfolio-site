@@ -501,6 +501,69 @@ button {
   margin-left: 0.5rem;
 }
 
+.social-quick-links .social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Core Toolkit & Stack Showcase Strip */
+.hero-tech-strip {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tech-strip-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.tech-strip-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.tech-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  user-select: none;
+}
+
+.tech-pill-badge:hover {
+  border-color: var(--accent-sky);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+}
+
+.tech-icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.skill-icon-wrapper .tech-icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* Hero Terminal Box */
 .hero-terminal {
   background: var(--bg-input);
@@ -1854,6 +1917,13 @@ button {
   }
   .social-quick-links {
     margin-left: 0;
+    justify-content: center;
+  }
+  .hero-tech-strip {
+    align-items: center;
+    text-align: center;
+  }
+  .tech-strip-logos {
     justify-content: center;
   }
   .terminal-footer {
