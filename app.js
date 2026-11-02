@@ -664,6 +664,31 @@ Tier 1 (1-30 Days Arrears): Automated WhatsApp/SMS nudge with dynamic 1-click UP
 Tier 2 (31-60 Days Arrears): Interactive voice bot with flexible installment restructuring options.
 Tier 3 (61-90 Days Arrears): Senior collector intervention with personalized settlement parameters.
 Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation.`
+    },
+
+    bcgx: {
+      category: "Corporate Simulation",
+      tagClass: "corporate-pill",
+      title: "PowerCo Customer Churn Prediction & Price Sensitivity Analysis",
+      github: "https://github.com/dinesh-ch3",
+      overview: "Data science corporate simulation with BCG X & Forage investigating SME customer churn for PowerCo, a major energy utility facing market deregulation and competitor discounting.",
+      problem: "PowerCo experienced high customer churn suspected to be driven by price sensitivity, but lacked empirical statistical evidence and predictive models to identify at-risk customers before contract expiration.",
+      approach: [
+        "Framed business hypotheses and performed exploratory data analysis across 16,000+ enterprise client records with skewed energy consumption metrics.",
+        "Engineered key predictive indicators including trailing 12-month price differentials across peak/off-peak energy bands and contract maturity ratios.",
+        "Trained a Random Forest classification model with hyperparameter tuning to evaluate feature importances and predict churn probabilities.",
+        "Delivered an executive slide deck and strategic memo advising leadership against blanket price cuts in favor of targeted retention incentives for high-risk accounts."
+      ],
+      metrics: [
+        { num: "16K+", desc: "Enterprise client records analyzed" },
+        { num: "Nov 2026", desc: "BCG X & Forage simulation completed" },
+        { num: "Verified", desc: "Official Certificate of Completion" }
+      ],
+      snippetTitle: "Executive Summary & Model Insights",
+      snippet: `// BCG X PowerCo Churn Analysis Findings:
+1. Price sensitivity is NOT the sole driver of churn; net margin and consumption volatility hold higher predictive weight.
+2. Blanket 20% discount is cost-prohibitive across all clients.
+3. Recommendation: Deploy targeted retention offers only to clients with >0.60 churn propensity score, preserving margin while recovering 35%+ of at-risk gross revenue.`
     }
   };
 
