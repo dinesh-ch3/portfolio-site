@@ -1,43 +1,47 @@
-# Chittinedi Dinesh - Data Analyst Portfolio Website
+# Dinesh Chittineedi - Frontend Web Developer & Software Engineer
 
-> Production-grade, responsive portfolio website showcasing real-world Data Analytics projects, SQL pipelines, Python EDA, Power BI dashboards, and Excel actuarial modeling.
+> Responsive personal portfolio showcasing high-performance web applications, React.js component-driven design, client-side state management, and relational SQL integrations.
 
-## 🚀 Live Demo URL
-**[dinesh-ch3.github.io](https://dinesh-ch3.github.io)**
+## 🌐 Live Portfolio URL
+**[dinesh-ch3.github.io/portfolio-site](https://dinesh-ch3.github.io/portfolio-site)**  
+*(Also hosted at [dinesh-ch3.github.io](https://dinesh-ch3.github.io))*
 
 ---
 
-## 🛠️ Tech Stack & Architecture
-- **HTML5**: Semantic, accessible structure with OpenGraph & Twitter cards.
-- **CSS3**: Modern engineering slate theme (dark mode default with studio light mode toggle), CSS variables, flexbox, CSS grid.
+## 🚀 Featured Web Development Project
+
+### **Hospital Records & Patient Management Interface**
+- **Repository:** [github.com/dinesh-ch3/hospital-management-ui](https://github.com/dinesh-ch3/hospital-management-ui)
+- **Tech Stack:** React.js, JavaScript (ES6+), SQL (MySQL), CSS3 (Zero External Libraries)
+- **Key Highlights:**
+  - Engineered an administrative dashboard to manage 10,000+ patient records with dynamic client-side pagination, multi-criteria filtering, and live search.
+  - Integrated structured relational SQL queries to track patient admissions, departmental bed occupancy, and visit timelines with low query latency (< 5ms).
+  - Constructed reusable table, modal, and alert components with zero external CSS libraries, reducing runtime stylesheet overhead.
+
+---
+
+## 🛠️ Portfolio Tech Stack & Architecture
+- **HTML5**: Semantic, accessible markup structured for 95+ Lighthouse audits across Performance, Accessibility, and SEO.
+- **CSS3**: Modern slate theme (Dark mode default with Studio Light mode toggle), CSS custom properties, Flexbox, and CSS Grid.
 - **JavaScript (ES6+)**:
-  - Live Data Lab with **Chart.js** (interactive visualization switching).
-  - Instant project filtering across SQL, Python, Power BI, and Excel.
-  - Interactive Case Study Deep Dive modals with code & schema inspectors.
-  - Clipboard API for 1-click email copy with toast notifications.
-- **Icons**: Lucide Icons CDN.
-- **Hosting**: GitHub Pages (100% Free, SSL encrypted, zero monthly cost).
+  - Instant project filtering across React & Web Dev, SQL, Python, Power BI, and Excel.
+  - Interactive Case Study Deep Dive modals with relational queries and code inspectors.
+  - Dynamic client-side state and clipboard integration with feedback toasts.
+- **Resume Downloads**: High-resolution `Dinesh_Chittineedi_Web_Developer_Resume.pdf` and data analytics resumes.
 
 ---
 
 ## 📂 Repository Contents
 - `index.html` - Main landing page and portfolio interface.
-- `style.css` - Custom design system, typography, cards, and animations.
-- `app.js` - Data lab controller, modal logic, theme switcher, and filter logic.
-- `Dinesh_Chittinedi_Data_Analyst_Resume.pdf` - High-resolution PDF resume for direct recruiter downloads.
-- `.nojekyll` - Ensures fast, direct asset serving on GitHub Pages.
+- `style.css` - Custom design system, typography, card styles, and animations.
+- `app.js` - Case study modal logic, theme switcher, and filter controller.
+- `Dinesh_Chittineedi_Web_Developer_Resume.pdf` - Clean, professional Web Developer PDF resume.
+- `.nojekyll` - Bypasses Jekyll on GitHub Pages for instant static delivery.
 
 ---
 
-## ⚡ How to Deploy to GitHub Pages (100% Free)
-
-### Option 1: Standard GitHub User Page (`dinesh-ch3.github.io`)
-1. Create a new public repository on GitHub named: **`dinesh-ch3.github.io`**
-2. Push or upload these files to the `main` branch.
-3. Your website will instantly be live at: **`https://dinesh-ch3.github.io`**
-
-### Option 2: Using the Existing `portfolio-site` Repo
-1. Push these files to your existing `portfolio-site` repository.
-2. Go to repository **Settings** -> **Pages**.
-3. Under **Branch**, select `main` and folder `/ (root)`, then click **Save**.
-4. Your website will be live at: **`https://dinesh-ch3.github.io/portfolio-site`**
+## 👤 Developer Profile
+- **Name:** Dinesh Chittineedi
+- **Email:** dinesh435ch@gmail.com
+- **LinkedIn:** [linkedin.com/in/dinesh-ch-7907052b5](https://www.linkedin.com/in/dinesh-ch-7907052b5/)
+- **GitHub:** [github.com/dinesh-ch3](https://github.com/dinesh-ch3)

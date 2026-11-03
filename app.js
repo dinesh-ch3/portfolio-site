@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHITTINEDI DINESH - PORTFOLIO INTERACTIVITY & LIVE DATA LAB
+   DINESH CHITTINEEDI - PORTFOLIO INTERACTIVITY & LIVE DATA LAB
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -497,6 +497,39 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
   // 6. Case Study Deep Dive Modal Data & Logic
   // -------------------------------------------------------------------------
   const caseStudies = {
+    hospitalUI: {
+      category: "React.js • SQL • CSS3",
+      tagClass: "frontend-pill",
+      title: "Hospital Records & Patient Management Interface",
+      github: "https://github.com/dinesh-ch3/hospital-management-ui",
+      overview: "Production administrative healthcare dashboard engineered with React.js and structured relational MySQL queries. Designed to manage 10,000+ patient records with dynamic client-side pagination, multi-criteria filtering, debounced live search, real-time departmental bed occupancy tracking, and zero external CSS libraries.",
+      problem: "Healthcare operators frequently deal with bulky client-side datasets exceeding 10,000 records. Off-the-shelf UI component libraries add significant runtime bundle overhead, while unoptimized filtering and relational queries cause UI lag and degraded frame rates.",
+      approach: [
+        "Engineered an administrative dashboard to manage 10,000+ patient records with dynamic client-side pagination, multi-criteria filtering, and live search.",
+        "Integrated structured relational SQL queries to track patient admissions, departmental bed occupancy, and visit timelines with low query latency (< 5ms).",
+        "Constructed reusable table, modal, and alert components with zero external CSS libraries, reducing runtime stylesheet overhead."
+      ],
+      metrics: [
+        { num: "10,000+", desc: "Patient records managed with client-side indexing" },
+        { num: "< 5 ms", desc: "Relational SQL query execution latency" },
+        { num: "0 KB", desc: "External CSS library overhead (100% pure CSS3)" }
+      ],
+      snippetTitle: "Departmental Bed Occupancy SQL Analytics & Relational Tracking",
+      snippet: `-- Track bed occupancy and capacity utilization across clinical departments
+SELECT 
+    d.name AS Department,
+    d.total_beds AS Total_Beds,
+    COUNT(CASE WHEN a.status IN ('Admitted', 'ICU Care') THEN 1 END) AS Occupied_Beds,
+    (d.total_beds - COUNT(CASE WHEN a.status IN ('Admitted', 'ICU Care') THEN 1 END)) AS Available_Beds,
+    ROUND(
+        (COUNT(CASE WHEN a.status IN ('Admitted', 'ICU Care') THEN 1 END) * 100.0) / d.total_beds, 
+        1
+    ) AS Occupancy_Rate_Pct
+FROM departments d
+LEFT JOIN admissions a ON d.dept_id = a.dept_id
+GROUP BY d.dept_id, d.name, d.total_beds
+ORDER BY Occupancy_Rate_Pct DESC;`
+    },
     hospital: {
       category: "SQL & Power BI",
       tagClass: "sql-pill",

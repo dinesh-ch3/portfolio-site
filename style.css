@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHITTINEDI DINESH - EXECUTIVE DATA ANALYST PORTFOLIO
+   DINESH CHITTINEEDI - FRONTEND WEB DEVELOPER & SOFTWARE ENGINEER PORTFOLIO
    Design System: Modern Engineering Slate / Swiss-Nordic High-Contrast Minimalist
    ========================================================================== */
 
@@ -782,6 +782,7 @@ button {
   border-radius: var(--radius-pill);
 }
 
+.react-pill, .frontend-pill { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
 .sql-pill { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
 .python-pill { background: rgba(16, 185, 129, 0.12); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
 .excel-pill { background: rgba(245, 158, 11, 0.12); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
