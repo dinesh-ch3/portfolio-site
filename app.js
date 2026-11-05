@@ -53,6 +53,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
+  // 1b. Palette Switcher (Reel Feature: Diego Aranda 90/10 Architecture)
+  // -------------------------------------------------------------------------
+  const paletteButtons = document.querySelectorAll('[data-palette-choice]');
+  const savedPalette = localStorage.getItem('palette') || 'lime';
+  htmlRoot.setAttribute('data-palette', savedPalette);
+
+  function syncPaletteButtons(activePalette) {
+    paletteButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-palette-choice') === activePalette);
+    });
+  }
+
+  syncPaletteButtons(savedPalette);
+
+  paletteButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const choice = btn.getAttribute('data-palette-choice');
+      htmlRoot.setAttribute('data-palette', choice);
+      localStorage.setItem('palette', choice);
+      syncPaletteButtons(choice);
+
+      // Re-init current chart with new accent palette
+      if (typeof currentScenarioKey !== 'undefined' && currentScenarioKey) {
+        initChart(currentScenarioKey);
+      }
+    });
+  });
+
+  // -------------------------------------------------------------------------
   // 2. Mobile Menu Drawer
   // -------------------------------------------------------------------------
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -368,9 +397,29 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
     const textColor = isDark ? '#94a3b8' : '#475569';
     const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)';
 
+    // Dynamic accent color from active 90/10 palette
+    const activePalette = htmlRoot.getAttribute('data-palette') || 'lime';
+    const accentColors = {
+      lime: '#ccff00',
+      coral: '#ff5733',
+      purple: '#c084fc'
+    };
+    const currentAccent = accentColors[activePalette] || '#ccff00';
+
+    const clonedChartData = JSON.parse(JSON.stringify(data.chartData));
+    clonedChartData.datasets.forEach(ds => {
+      if (typeof ds.backgroundColor === 'string' && (ds.backgroundColor === '#38bdf8' || ds.backgroundColor === '#ccff00')) {
+        ds.backgroundColor = currentAccent;
+      }
+      if (ds.borderColor === '#38bdf8' || ds.borderColor === '#ccff00') {
+        ds.borderColor = currentAccent;
+        ds.pointBackgroundColor = currentAccent;
+      }
+    });
+
     chartInstance = new Chart(ctx, {
       type: data.chartType,
-      data: data.chartData,
+      data: clonedChartData,
       options: {
         responsive: true,
         maintainAspectRatio: false,

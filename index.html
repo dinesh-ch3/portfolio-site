@@ -41,7 +41,7 @@
             <path d="M7 16l4-5 4 3 6-7"/>
           </svg>CD
         </span>
-        <span class="brand-text">Dinesh <span class="text-accent">Chittinedi</span></span>
+        <span class="brand-text">Dinesh <span class="brand-accent">Chittinedi</span></span>
       </a>
 
       <nav class="main-nav">
@@ -53,6 +53,22 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Palette Switcher (Reel Feature: 90/10 Rule) -->
+        <div class="palette-switcher" aria-label="Curated Color Palettes from Reel" title="90/10 Palette (Diego Aranda Rule)">
+          <button class="palette-pill active" data-palette-choice="lime" title="Modern Tech: Black & White + Lime">
+            <span class="swatch swatch-lime"></span>
+            <span class="palette-name">Lime</span>
+          </button>
+          <button class="palette-pill" data-palette-choice="coral" title="Executive: Navy & Cream + Coral">
+            <span class="swatch swatch-coral"></span>
+            <span class="palette-name">Coral</span>
+          </button>
+          <button class="palette-pill" data-palette-choice="purple" title="Editorial: Forest & Beige + Purple">
+            <span class="swatch swatch-purple"></span>
+            <span class="palette-name">Purple</span>
+          </button>
+        </div>
+
         <button id="themeToggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
           <i data-lucide="sun" class="sun-icon"></i>
           <i data-lucide="moon" class="moon-icon"></i>
@@ -77,6 +93,20 @@
         <a href="#skills" class="mobile-link">Skills</a>
         <a href="#experience" class="mobile-link">Experience</a>
         <a href="#contact" class="mobile-link">Contact</a>
+        <div class="mobile-palette-strip">
+          <span class="mobile-palette-label">Color Palette:</span>
+          <div class="palette-switcher mobile-palette">
+            <button class="palette-pill active" data-palette-choice="lime">
+              <span class="swatch swatch-lime"></span> Lime
+            </button>
+            <button class="palette-pill" data-palette-choice="coral">
+              <span class="swatch swatch-coral"></span> Coral
+            </button>
+            <button class="palette-pill" data-palette-choice="purple">
+              <span class="swatch swatch-purple"></span> Purple
+            </button>
+          </div>
+        </div>
         <a href="Dinesh_Chittineedi_Web_Developer_Resume.pdf" download class="btn btn-outline w-full mt-2">
           <i data-lucide="file-down" class="btn-icon-svg"></i> Download Resume
         </a>
@@ -94,7 +124,7 @@
         </div>
 
         <h1 class="hero-title">
-          Translating Complex Data into Insights &amp; <span class="gradient-text">High-Performance Web Applications</span>
+          Translating Complex Data into Insights &amp; <span class="hero-highlight">High-Performance Web Applications</span>
         </h1>
 
         <p class="hero-subtitle">
