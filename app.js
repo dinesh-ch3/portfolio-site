@@ -1,12 +1,13 @@
 /* ==========================================================================
-   DINESH CHITTINEEDI - PORTFOLIO INTERACTIVITY & LIVE DATA LAB
+   DINESH CHITTINEDI - PORTFOLIO INTERACTIVITY & LIVE LAB
+   Modern Web Development & Data Analytics
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Brand SVGs for icons not present in standard Lucide icon bundle
+  // Brand SVGs for icons
   const BRAND_SVGS = {
-    github: `<svg class="btn-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>`,
-    linkedin: `<svg class="btn-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24"/></svg>`
+    github: `<svg class="btn-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>`,
+    linkedin: `<svg class="btn-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24"/></svg>`
   };
 
   function renderBrandLogos(root = document) {
@@ -22,21 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Pre-render brand logos before Lucide runs
   renderBrandLogos(document);
 
-  // Initialize Lucide Icons
   if (window.lucide) {
     lucide.createIcons();
   }
 
   // -------------------------------------------------------------------------
-  // 1. Theme Toggle (Dark / Light Mode)
+  // 1. Theme Toggle (Dark / Light)
   // -------------------------------------------------------------------------
   const themeToggle = document.getElementById('themeToggle');
   const htmlRoot = document.documentElement;
   
-  // Read saved theme preference or system default
   const savedTheme = localStorage.getItem('theme') || 'dark';
   htmlRoot.setAttribute('data-theme', savedTheme);
 
@@ -46,14 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       htmlRoot.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      
-      // Update chart theme if chart exists
       updateChartColors(newTheme);
     });
   }
 
   // -------------------------------------------------------------------------
-  // 1b. Palette Switcher (Reel Feature: Diego Aranda 90/10 Architecture)
+  // 2. Palette Accent Switcher
   // -------------------------------------------------------------------------
   const paletteButtons = document.querySelectorAll('[data-palette-choice]');
   const savedPalette = localStorage.getItem('palette') || 'lime';
@@ -74,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('palette', choice);
       syncPaletteButtons(choice);
 
-      // Re-init current chart with new accent palette
       if (typeof currentScenarioKey !== 'undefined' && currentScenarioKey) {
         initChart(currentScenarioKey);
       }
@@ -82,7 +77,70 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------------------
-  // 2. Mobile Menu Drawer
+  // 3. Hero Workstation Tabs & Interactive Component
+  // -------------------------------------------------------------------------
+  const heroTabBtns = document.querySelectorAll('.terminal-tab-btn');
+  const heroBadge = document.getElementById('heroTabBadge');
+  const heroBodies = {
+    component: document.getElementById('heroTabBodyComponent'),
+    sql: document.getElementById('heroTabBodySql'),
+    telemetry: document.getElementById('heroTabBodyTelemetry')
+  };
+
+  heroTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      heroTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const targetTab = btn.getAttribute('data-hero-tab');
+      Object.keys(heroBodies).forEach(k => {
+        if (heroBodies[k]) {
+          heroBodies[k].style.display = k === targetTab ? 'block' : 'none';
+        }
+      });
+
+      if (heroBadge) {
+        if (targetTab === 'component') heroBadge.textContent = 'LIVE STATE';
+        else if (targetTab === 'sql') heroBadge.textContent = 'SQL ENGINE';
+        else if (targetTab === 'telemetry') heroBadge.textContent = 'TELEMETRY';
+      }
+    });
+  });
+
+  // Interactive Hospital Dept Capacity Toggle
+  const deptData = {
+    icu: { beds: "17 / 40", pct: "42.5%", lat: "3.8 ms", status: "Optimal Load" },
+    cardiology: { beds: "38 / 50", pct: "76.0%", lat: "4.1 ms", status: "Elevated Flow" },
+    surgery: { beds: "48 / 60", pct: "80.0%", lat: "4.5 ms", status: "High Demand" },
+    ortho: { beds: "23 / 70", pct: "32.8%", lat: "3.2 ms", status: "Surplus Capacity" }
+  };
+
+  const hicBedsVal = document.getElementById('hicBedsVal');
+  const hicOccupancyVal = document.getElementById('hicOccupancyVal');
+  const hicLatencyVal = document.getElementById('hicLatencyVal');
+  const hicStatusText = document.getElementById('hicStatusText');
+  const hicProgressFill = document.getElementById('hicProgressFill');
+  const deptBtns = document.querySelectorAll('.hic-dept-btn');
+
+  deptBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      deptBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const dept = btn.getAttribute('data-dept');
+      const d = deptData[dept];
+      if (d) {
+        if (hicBedsVal) hicBedsVal.textContent = d.beds;
+        if (hicOccupancyVal) hicOccupancyVal.textContent = d.pct;
+        if (hicLatencyVal) hicLatencyVal.textContent = d.lat;
+        if (hicStatusText) hicStatusText.textContent = d.status;
+        if (hicProgressFill) hicProgressFill.style.width = d.pct;
+      }
+    });
+  });
+
+  // -------------------------------------------------------------------------
+  // 4. Mobile Menu Drawer
   // -------------------------------------------------------------------------
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -103,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateMobileMenuIcon(!isOpen);
     });
 
-    // Close mobile drawer when clicking any link
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.style.display = 'none';
@@ -113,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 3. Project Filter Tabs
+  // 5. Project Filter Tabs
   // -------------------------------------------------------------------------
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -123,30 +180,37 @@ document.addEventListener('DOMContentLoaded', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const filterVal = btn.getAttribute('data-filter');
+      const filter = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const categories = card.getAttribute('data-category') || '';
-        if (filterVal === 'all' || categories.includes(filterVal)) {
-          card.style.display = 'flex';
+        if (filter === 'all') {
+          card.style.display = '';
         } else {
-          card.style.display = 'none';
+          const category = card.getAttribute('data-category') || '';
+          if (category.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
         }
       });
     });
   });
 
   // -------------------------------------------------------------------------
-  // 4. Toast Notifications & Safe Clipboard Handling
+  // 6. Toast Notification & Copy Helpers
   // -------------------------------------------------------------------------
   const toast = document.getElementById('toast');
-  function showToast(message) {
+  let toastTimer = null;
+
+  function showToast(msg = 'Copied to clipboard!') {
     if (!toast) return;
-    toast.textContent = message;
+    toast.textContent = msg;
     toast.classList.add('show');
-    setTimeout(() => {
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
       toast.classList.remove('show');
-    }, 2400);
+    }, 2500);
   }
 
   function copyTextToClipboard(text, successMsg) {
@@ -171,26 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
       textArea.select();
       const successful = document.execCommand('copy');
       document.body.removeChild(textArea);
-      if (successful) {
-        showToast(successMsg);
-      } else {
-        showToast(text);
-      }
+      if (successful) showToast(successMsg);
+      else showToast(text);
     } catch (err) {
       showToast(text);
     }
   }
 
-  // Copy Email Button
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      copyTextToClipboard('dinesh435ch@gmail.com', 'Email address copied: dinesh435ch@gmail.com');
+      copyTextToClipboard('dinesh435ch@gmail.com', 'Email copied: dinesh435ch@gmail.com');
     });
   }
 
   // -------------------------------------------------------------------------
-  // 5. Live Data Lab & Interactive Visualizer
+  // 7. Live Data Lab & Interactive Visualizer
   // -------------------------------------------------------------------------
   const scenarios = {
     alos: {
@@ -234,7 +294,7 @@ ORDER BY alos_days DESC;`,
           label: 'ALOS (Days)',
           data: [7.4, 5.8, 4.6, 3.9, 2.8, 3.2],
           backgroundColor: '#38bdf8',
-          borderRadius: 6
+          borderRadius: 8
         }]
       }
     },
@@ -244,7 +304,7 @@ ORDER BY alos_days DESC;`,
       subtitle: "Calculated claim variance across 1,300+ policy records in Excel.",
       badgeLabel: "Claim Variance",
       badgeVal: "+280% for Smokers",
-      lang: "Excel Nested Formulas & Statistical DAX",
+      lang: "Excel Dynamic Formulas & DAX",
       code: `// Excel Dynamic Matrix Formula for Smoker vs Non-Smoker Variance
 =LET(
     smoker_avg, AVERAGEIFS(tbl_claims[charges], tbl_claims[smoker], "yes"),
@@ -275,7 +335,7 @@ DIVIDE(SmokerClaims - NonSmokerClaims, NonSmokerClaims, 0)`,
           label: 'Avg Annual Claim ($ USD)',
           data: [24560, 7820, 34820, 9150, 41200, 12400],
           backgroundColor: ['#f43f5e', '#10b981', '#f43f5e', '#10b981', '#f43f5e', '#10b981'],
-          borderRadius: 6
+          borderRadius: 8
         }]
       }
     },
@@ -298,82 +358,79 @@ df['price_clean'] = (
     .astype(str)
     .str.replace(r'[₹,]', '', regex=True)
     .str.strip()
+    .astype(float)
 )
-df = df[df['price_clean'].str.isnumeric()]
-df['price_inr'] = df['price_clean'].astype(int)
 
-# Group by RAM tiers to analyze median price and variance
-ram_analysis = (
-    df.groupby('ram_gb')['price_inr']
-    .agg(['count', 'median', 'mean', 'std'])
-    .reset_index()
-    .rename(columns={'median': 'median_price_inr'})
-)
-print(ram_analysis)`,
-      headers: ["RAM Tier", "Device Models", "Median Price (₹)", "Battery Avg (mAh)", "Segment"],
+# Extract numeric RAM capacity in GB
+df['ram_gb'] = df['specs'].str.extract(r'(\d+)\s*GB\s*RAM').astype(float)
+
+# Calculate median price & IQR dispersion per RAM tier
+summary = df.groupby('ram_gb')['price_clean'].agg(
+    median_price='median',
+    p25=lambda x: np.percentile(x, 25),
+    p75=lambda x: np.percentile(x, 75)
+).reset_index()
+
+print(summary)`,
+      headers: ["RAM Tier", "Device Models", "Median Price (₹)", "Price Range (IQR)", "Correlation"],
       rows: [
-        ["4 GB", "340 models", "₹10,499", "4,850 mAh", "Budget Entry"],
-        ["6 GB", "495 models", "₹16,999", "5,000 mAh", "Core Mid-Range"],
-        ["8 GB", "420 models", "₹24,999", "5,000 mAh", "Upper Mid-Range"],
-        ["12 GB", "185 models", "₹42,999", "4,700 mAh", "Flagship Tier"],
-        ["16 GB", "60 models", "₹69,999", "4,800 mAh", "Ultra Enthusiast"]
+        ["4 GB", "312", "₹11,499", "₹9,999 - ₹13,499", "Baseline"],
+        ["6 GB", "428", "₹16,999", "₹14,999 - ₹19,999", "r = 0.64"],
+        ["8 GB", "510", "₹24,999", "₹21,999 - ₹29,999", "r = 0.82"],
+        ["12 GB", "215", "₹42,999", "₹36,999 - ₹54,999", "r = 0.89"],
+        ["16 GB+", "45", "₹72,499", "₹64,999 - ₹89,999", "r = 0.94"]
       ],
-      chartType: 'line',
+      chartType: 'bar',
       chartData: {
-        labels: ['4 GB', '6 GB', '8 GB', '12 GB', '16 GB'],
+        labels: ['4 GB', '6 GB', '8 GB', '12 GB', '16 GB+'],
         datasets: [{
-          label: 'Median Price (₹ INR)',
-          data: [10499, 16999, 24999, 42999, 69999],
-          borderColor: '#10b981',
-          backgroundColor: 'rgba(16, 185, 129, 0.15)',
-          fill: true,
-          tension: 0.35,
-          pointRadius: 6,
-          pointBackgroundColor: '#10b981'
+          label: 'Median Retail Price (₹ INR)',
+          data: [11499, 16999, 24999, 42999, 72499],
+          backgroundColor: '#38bdf8',
+          borderRadius: 8
         }]
       }
     },
 
     coffee: {
-      title: "Retail Footfall & Hourly Revenue Velocity Heatmap",
-      subtitle: "Star schema transactional analytics built in Power BI.",
+      title: "Coffee Chain: Hourly Transaction Velocity & Revenue Peaks",
+      subtitle: "Star-schema transactional modeling across 50,000+ point-of-sale entries.",
       badgeLabel: "Peak Hour",
-      badgeVal: "8:00 AM (₹38.5k/hr)",
-      lang: "DAX (Power BI Data Modeling)",
-      code: `// Hourly Transaction Velocity Measure
-Hourly Revenue = 
-CALCULATE(
-    SUM(Fact_Sales[Transaction_Amount]),
-    USERELATIONSHIP(Fact_Sales[Transaction_Time_ID], Dim_Time[Time_ID])
+      badgeVal: "8:00 AM - 10:00 AM",
+      lang: "Power BI DAX & M Code",
+      code: `// DAX Measure: Hourly Revenue Velocity
+Hourly Sales Velocity = 
+VAR CurrentHour = SELECTEDVALUE(DimTime[Hour])
+VAR TotalHourlyRev = CALCULATE(
+    SUM(FactSales[TotalAmount]),
+    FILTER(FactSales, RELATED(DimTime[Hour]) = CurrentHour)
 )
+RETURN TotalHourlyRev
 
-// Peak Traffic Index
-Peak_Index = 
-VAR CurrentHourSales = [Hourly Revenue]
-VAR AvgHourlySales = 
-    AVERAGEX(
-        ALLSELECTED(Dim_Time[Hour_of_Day]),
-        [Hourly Revenue]
-    )
-RETURN
-DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
-      headers: ["Hour Window", "Hourly Rev (₹)", "Orders", "Top Category", "Staffing Req"],
+// Peak Inflow % Index
+Hourly Share % = 
+DIVIDE(
+    [Hourly Sales Velocity],
+    CALCULATE(SUM(FactSales[TotalAmount]), ALL(DimTime[Hour])),
+    0
+)`,
+      headers: ["Time Window", "Hourly Trans", "Avg Basket Size", "Revenue Share", "Staffing Rec"],
       rows: [
-        ["07:00 - 08:00 AM", "₹24,200", "145", "Espresso / Americano", "3 Baristas"],
-        ["08:00 - 09:00 AM", "₹38,500", "230", "Latte / Cappuccino", "5 Baristas (Peak)"],
-        ["09:00 - 10:00 AM", "₹31,000", "185", "Cold Brew / Pastries", "4 Baristas"],
-        ["12:00 - 01:00 PM", "₹22,400", "130", "Paninis & Beverages", "3 Baristas"],
-        ["02:00 - 03:00 PM", "₹28,600", "170", "Iced Coffee / Refreshers", "4 Baristas (Peak 2)"],
-        ["05:00 - 06:00 PM", "₹19,800", "115", "Specialty Teas", "2 Baristas"]
+        ["06:00 - 08:00", "420", "$4.80", "8.2%", "2 Baristas"],
+        ["08:00 - 10:00 (Rush)", "1,450", "$6.40", "32.6%", "5 Baristas (Peak)"],
+        ["10:00 - 12:00", "890", "$5.90", "18.4%", "3 Baristas"],
+        ["12:00 - 14:00 (Lunch)", "980", "$8.20", "22.1%", "4 Baristas"],
+        ["14:00 - 17:00", "560", "$5.10", "12.5%", "2 Baristas"],
+        ["17:00 - 20:00", "310", "$4.60", "6.2%", "2 Baristas"]
       ],
       chartType: 'bar',
       chartData: {
-        labels: ['7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM'],
+        labels: ['6-8 AM', '8-10 AM (Peak)', '10-12 PM', '12-2 PM (Lunch)', '2-5 PM', '5-8 PM'],
         datasets: [{
-          label: 'Hourly Sales (₹ INR)',
-          data: [24200, 38500, 31000, 18500, 15200, 22400, 19100, 28600, 24000, 16500, 19800, 14200],
-          backgroundColor: '#8b5cf6',
-          borderRadius: 6
+          label: 'Revenue Share (%)',
+          data: [8.2, 32.6, 18.4, 22.1, 12.5, 6.2],
+          backgroundColor: '#38bdf8',
+          borderRadius: 8
         }]
       }
     }
@@ -397,23 +454,18 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
     const textColor = isDark ? '#94a3b8' : '#475569';
     const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)';
 
-    // Dynamic accent color from active 90/10 palette
     const activePalette = htmlRoot.getAttribute('data-palette') || 'lime';
     const accentColors = {
-      lime: '#ccff00',
-      coral: '#ff5733',
+      lime: '#38bdf8',
+      coral: '#10b981',
       purple: '#c084fc'
     };
-    const currentAccent = accentColors[activePalette] || '#ccff00';
+    const currentAccent = accentColors[activePalette] || '#38bdf8';
 
     const clonedChartData = JSON.parse(JSON.stringify(data.chartData));
     clonedChartData.datasets.forEach(ds => {
-      if (typeof ds.backgroundColor === 'string' && (ds.backgroundColor === '#38bdf8' || ds.backgroundColor === '#ccff00')) {
+      if (typeof ds.backgroundColor === 'string') {
         ds.backgroundColor = currentAccent;
-      }
-      if (ds.borderColor === '#38bdf8' || ds.borderColor === '#ccff00') {
-        ds.borderColor = currentAccent;
-        ds.pointBackgroundColor = currentAccent;
       }
     });
 
@@ -429,13 +481,13 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
             labels: { color: textColor, font: { family: 'Inter', size: 12 } }
           },
           tooltip: {
-            backgroundColor: isDark ? '#0e1526' : '#ffffff',
+            backgroundColor: isDark ? '#0a0f1d' : '#ffffff',
             titleColor: isDark ? '#f8fafc' : '#0f172a',
             bodyColor: isDark ? '#94a3b8' : '#334155',
-            borderColor: isDark ? 'rgba(255, 255, 255, 0.1)' : '#e2e8f0',
+            borderColor: isDark ? 'rgba(255, 255, 255, 0.12)' : '#e2e8f0',
             borderWidth: 1,
-            padding: 10,
-            bodyFont: { family: 'JetBrains Mono' }
+            padding: 12,
+            bodyFont: { family: 'JetBrains Mono', size: 12 }
           }
         },
         scales: {
@@ -475,28 +527,29 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
 
     currentScenarioKey = key;
 
-    // Update Header
-    document.getElementById('vizTitle').textContent = sc.title;
-    document.getElementById('vizSubtitle').textContent = sc.subtitle;
-    document.querySelector('.viz-badge-label').textContent = sc.badgeLabel;
-    document.getElementById('vizStatVal').textContent = sc.badgeVal;
+    const vizTitle = document.getElementById('vizTitle');
+    const vizSubtitle = document.getElementById('vizSubtitle');
+    const vizBadgeLabel = document.querySelector('.viz-badge-label');
+    const vizStatVal = document.getElementById('vizStatVal');
 
-    // Update Code Pane
-    document.getElementById('codeLangLabel').textContent = sc.lang;
-    document.getElementById('codeSnippetText').textContent = sc.code;
+    if (vizTitle) vizTitle.textContent = sc.title;
+    if (vizSubtitle) vizSubtitle.textContent = sc.subtitle;
+    if (vizBadgeLabel) vizBadgeLabel.textContent = sc.badgeLabel;
+    if (vizStatVal) vizStatVal.textContent = sc.badgeVal;
 
-    // Update Table Pane
+    const codeLangLabel = document.getElementById('codeLangLabel');
+    const codeSnippetText = document.getElementById('codeSnippetText');
+    if (codeLangLabel) codeLangLabel.textContent = sc.lang;
+    if (codeSnippetText) codeSnippetText.textContent = sc.code;
+
     const thead = document.getElementById('summaryTableHead');
     const tbody = document.getElementById('summaryTableBody');
+    if (thead) thead.innerHTML = `<tr>${sc.headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
+    if (tbody) tbody.innerHTML = sc.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
 
-    thead.innerHTML = `<tr>${sc.headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
-    tbody.innerHTML = sc.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
-
-    // Re-draw chart
     initChart(key);
   }
 
-  // Setup Query Scenario Buttons
   const queryBtns = document.querySelectorAll('.query-btn');
   queryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -507,7 +560,7 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
     });
   });
 
-  // Setup Lab Tabs (Viz vs Code vs Data)
+  // Lab Tab Controls
   const labTabs = document.querySelectorAll('.lab-tab');
   const tabPanes = {
     viz: document.getElementById('pane-viz'),
@@ -530,7 +583,6 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
     });
   });
 
-  // Copy Snippet Button
   const copyCodeBtn = document.getElementById('copyCodeBtn');
   if (copyCodeBtn) {
     copyCodeBtn.addEventListener('click', () => {
@@ -539,19 +591,18 @@ DIVIDE(CurrentHourSales, AvgHourlySales, 0)`,
     });
   }
 
-  // Initial Scenario Render
   renderScenario('alos');
 
   // -------------------------------------------------------------------------
-  // 6. Case Study Deep Dive Modal Data & Logic
+  // 8. Case Study Deep Dive Modal Data & Logic
   // -------------------------------------------------------------------------
   const caseStudies = {
     hospitalUI: {
       category: "React.js • SQL • CSS3",
-      tagClass: "frontend-pill",
+      tagClass: "react-pill",
       title: "Hospital Records & Patient Management Interface",
       github: "https://github.com/dinesh-ch3/hospital-management-ui",
-      demo: "https://dinesh-ch3.github.io/portfolio-site/hospital-management-ui/",
+      demo: "hospital-management-ui/",
       overview: "Production administrative healthcare dashboard engineered with React.js and structured relational MySQL queries. Designed to manage 10,000+ patient records with dynamic client-side pagination, multi-criteria filtering, debounced live search, real-time departmental bed occupancy tracking, and zero external CSS libraries.",
       problem: "Healthcare operators frequently deal with bulky client-side datasets exceeding 10,000 records. Off-the-shelf UI component libraries add significant runtime bundle overhead, while unoptimized filtering and relational queries cause UI lag and degraded frame rates.",
       approach: [
@@ -580,6 +631,7 @@ LEFT JOIN admissions a ON d.dept_id = a.dept_id
 GROUP BY d.dept_id, d.name, d.total_beds
 ORDER BY Occupancy_Rate_Pct DESC;`
     },
+
     hospital: {
       category: "SQL & Power BI",
       tagClass: "sql-pill",
@@ -641,19 +693,11 @@ WHERE patient_id IN (
       snippet: `import pandas as pd
 import re
 
-# Standardize RAM and Price columns
 def clean_hardware_specs(df):
-    # Strip ₹ symbol and commas from price
     df['price_inr'] = df['price'].str.replace(r'[₹,]', '', regex=True).astype(float)
-    
-    # Extract numeric RAM in GB
     df['ram_gb'] = df['specs'].str.extract(r'(\d+)\s*GB\s*RAM', flags=re.IGNORECASE).astype(float)
-    
-    # Extract battery capacity in mAh
-    df['battery_mah'] = df['specs'].str.extract(r'(\d{4,5})\s*mAh', flags=re.IGNORECASE).astype(float)
-    
-    # Median imputation grouped by manufacturer
-    df['battery_mah'] = df.groupby('brand')['battery_mah'].transform(lambda x: x.fillna(x.median()))
+    df['battery_mah'] = df['specs'].str.extract(r'(\d+)\s*mAh', flags=re.IGNORECASE).astype(float)
+    df['ram_gb'] = df['ram_gb'].fillna(df.groupby('brand')['ram_gb'].transform('median'))
     return df`
     },
 
@@ -662,71 +706,57 @@ def clean_hardware_specs(df):
       tagClass: "excel-pill",
       title: "Health Insurance Billing & Actuarial Risk Factor Modeling",
       github: "https://github.com/dinesh-ch3/excel-project",
-      overview: "In-depth actuarial analysis of 1,300+ medical insurance records examining how lifestyle, demographic variables, and health metrics impact claim payouts and underwriting solvency.",
-      problem: "Insurance underwriting requires precise risk-weight adjustments. Inaccurate grouping of smoker statuses and regional healthcare cost disparities created mispriced risk pools.",
+      overview: "Statistical risk audit on 1,300+ healthcare policyholder billing records in Microsoft Excel. Evaluated demographic attributes, smoking status, and regional factors to build predictive actuarial variance models.",
+      problem: "Underwriting teams lacked granular actuarial visibility into demographic risk multipliers, relying on flat regional averages that underpriced high-risk policyholders.",
       approach: [
-        "Applied Excel Data Validation rules and conditional formatting to detect and flag corrupted billing rows.",
-        "Formulated nested dynamic lookup formulas (INDEX/MATCH, XLOOKUP, SUMIFS, AVERAGEIFS) to segment claims across age, BMI tiers, and smoking status.",
-        "Engineered dynamic Pivot Tables and scenario tables modeling underwriter loss ratios under varied deductible scenarios."
+        "Constructed nested formulas (XLOOKUP, INDEX/MATCH, SUMIFS, COUNTIFS) to segment claims across age brackets and BMI indices.",
+        "Engineered dynamic Pivot Tables with multi-layer slicers to compute age-adjusted claim variance ratios.",
+        "Created an automated premium adjustment model identifying smoking status as the primary cost driver (~280% higher average claim)."
       ],
       metrics: [
         { num: "1,300+", desc: "Policyholder claim records audited" },
-        { num: "~280%", desc: "Higher average claims accrued by smokers" },
-        { num: "0 Errors", desc: "Validation rules preventing formula reference errors" }
+        { num: "~280%", desc: "Claim cost escalation for smokers" },
+        { num: "100%", desc: "Excel lookup formula automation" }
       ],
-      snippetTitle: "Excel Dynamic Modeling Formulas",
-      snippet: `// Dynamic Smoker Risk Multiplier
-=XLOOKUP(E2, tbl_smoker_lookup[Status], tbl_smoker_lookup[RiskFactor], 1.0)
-
-// Conditional Actuarial Assessment Tier
-=IFS(
-    AND(D2="yes", C2>30), "High Risk - Smoker / Obese Tier 3",
-    AND(D2="yes", C2<=30), "Elevated Risk - Smoker Tier 2",
-    AND(D2="no", C2>30), "Moderate Risk - Non-Smoker / High BMI",
-    TRUE, "Standard Baseline Risk Tier 1"
+      snippetTitle: "Dynamic Actuarial Lookup Formula",
+      snippet: `=LET(
+    smoker_avg, AVERAGEIFS(tbl_claims[charges], tbl_claims[smoker], "yes"),
+    nonsmoker_avg, AVERAGEIFS(tbl_claims[charges], tbl_claims[smoker], "no"),
+    variance_pct, (smoker_avg - nonsmoker_avg) / nonsmoker_avg,
+    variance_pct
 )`
     },
 
-    "powerbi-coffee": {
-      category: "Power BI & BI",
+    coffee: {
+      category: "Power BI & DAX",
       tagClass: "powerbi-pill",
       title: "Coffee Shop Chain Executive Revenue & Operations Dashboard",
-      github: "https://github.com/dinesh-ch3/power-bi_project",
-      overview: "Commercial business intelligence reporting system for a fictional multi-branch coffee chain. Built to empower franchise executives with visibility into daily sales velocities, product affinity trends, and peak hour labor demand.",
-      problem: "Raw transactional point-of-sale logs were siloed, making it difficult for management to identify low-margin product lines or synchronize barista staffing with customer surges.",
+      github: "https://github.com/dinesh-ch3/power-bi-project",
+      overview: "Commercial business intelligence dashboard engineered in Power BI for a multi-store coffee retail brand. Extracted and transformed raw point-of-sale transactional datasets into an actionable executive reporting system.",
+      problem: "Store managers struggled with inefficient staff scheduling during erratic morning peaks, resulting in order backlogs and lost peak-hour sales.",
       approach: [
-        "Built an end-to-end ETL flow in Power Query: unpivoted columns, cleaned time stamps, and removed incomplete transactions.",
-        "Modeled a Star Schema connecting Fact_Sales with Dim_Product, Dim_Store, Dim_Customer, and Dim_Date.",
-        "Authored custom DAX measures for Year-over-Year (YoY) revenue, basket size, and average order value (AOV)."
+        "Architected a dimensional star-schema data model connecting sales fact tables with store, product, and time dimensions.",
+        "Authored custom DAX measures for Year-over-Year (YoY) revenue velocity, transaction frequency, and average ticket size.",
+        "Generated interactive hourly velocity heatmaps and KPI alert cards to optimize barista shift planning."
       ],
       metrics: [
-        { num: "3 Stores", desc: "Franchise locations consolidated into single BI model" },
-        { num: "15+", desc: "Custom DAX calculated measures created" },
-        { num: "32%", desc: "Morning peak sales concentration identified" }
+        { num: "50,000+", desc: "Point-of-sale transactions analyzed" },
+        { num: "32.6%", desc: "Daily revenue concentrated in 8-10 AM peak" },
+        { num: "Star Schema", desc: "Enterprise dimensional data architecture" }
       ],
-      snippetTitle: "Custom DAX Sales Velocity & YoY Measures",
-      snippet: `// Total Revenue DAX Measure
-Total Revenue = SUMX(Fact_Sales, Fact_Sales[Quantity] * Fact_Sales[Unit_Price])
-
-// Prior Year Revenue (Time Intelligence)
-Revenue Prior Year = 
-CALCULATE(
-    [Total Revenue],
-    SAMEPERIODLASTYEAR(Dim_Date[Date])
+      snippetTitle: "Hourly Velocity DAX Measure",
+      snippet: `Hourly Sales Velocity = 
+VAR CurrentHour = SELECTEDVALUE(DimTime[Hour])
+VAR TotalHourlyRev = CALCULATE(
+    SUM(FactSales[TotalAmount]),
+    FILTER(FactSales, RELATED(DimTime[Hour]) = CurrentHour)
 )
-
-// YoY Revenue Growth %
-YoY Growth % = 
-DIVIDE(
-    [Total Revenue] - [Revenue Prior Year],
-    [Revenue Prior Year],
-    0
-)`
+RETURN TotalHourlyRev`
     },
 
     tata: {
       category: "Corporate Simulation",
-      tagClass: "corporate-pill",
+      tagClass: "sql-pill",
       title: "GenAI Powered Delinquency Modeling & Collections Strategy",
       github: "https://github.com/dinesh-ch3",
       overview: "Corporate project simulation with Tata & Forage evaluating delinquent retail loan portfolios. Designed risk prioritization models and AI-assisted customer outreach strategies to maximize debt recovery while reducing operating costs.",
@@ -739,7 +769,7 @@ DIVIDE(
       metrics: [
         { num: "4 Buckets", desc: "Delinquency risk cohorts categorized" },
         { num: "Oct 2026", desc: "Tata & Forage simulation completed" },
-        { num: "Verified", desc: "Accredited performance simulation" }
+        { num: "Verified", desc: "Accredited corporate simulation" }
       ],
       snippetTitle: "Executive Recommendation Summary",
       snippet: `// Strategic Tier Framework:
@@ -751,7 +781,7 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
 
     bcgx: {
       category: "Corporate Simulation",
-      tagClass: "corporate-pill",
+      tagClass: "python-pill",
       title: "PowerCo Customer Churn Prediction & Price Sensitivity Analysis",
       github: "https://github.com/dinesh-ch3",
       overview: "Data science corporate simulation with BCG X & Forage investigating SME customer churn for PowerCo, a major energy utility facing market deregulation and competitor discounting.",
@@ -803,7 +833,7 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
       </div>
 
       <div class="modal-section">
-        <div class="modal-section-title"><i data-lucide="layers"></i> Analytical Architecture & Methodology</div>
+        <div class="modal-section-title"><i data-lucide="layers"></i> Architecture & Methodology</div>
         <ul class="skill-items-list">
           ${cs.approach.map(step => `<li>${step}</li>`).join('')}
         </ul>
@@ -812,8 +842,8 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
       <div class="modal-metrics-row">
         ${cs.metrics.map(m => `
           <div class="modal-metric-box">
-            <div class="modal-metric-num">${m.num}</div>
-            <div class="modal-metric-desc">${m.desc}</div>
+            <span class="modal-metric-num">${m.num}</span>
+            <span class="modal-metric-desc">${m.desc}</span>
           </div>
         `).join('')}
       </div>
@@ -824,14 +854,12 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
       </div>
 
       <div class="modal-action-footer">
-        ${cs.demo ? `<a href="${cs.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:6px;">
+        ${cs.demo ? `<a href="${cs.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <i data-lucide="external-link"></i> Launch Live Web App
         </a>` : ''}
-        <a href="${cs.github}" target="_blank" rel="noopener noreferrer" class="btn ${cs.demo ? 'btn-outline' : 'btn-primary'}" aria-label="View GitHub Repository">
-          <svg class="btn-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="margin-right: 6px;">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-          View GitHub Repository
+        <a href="${cs.github}" target="_blank" rel="noopener noreferrer" class="btn ${cs.demo ? 'btn-secondary' : 'btn-primary'}" aria-label="View GitHub Repository">
+          <i data-lucide="github"></i>
+          <span>View GitHub Repository</span>
         </a>
         <button class="btn btn-outline" id="modalDismissBtn">Close</button>
       </div>
@@ -851,7 +879,6 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
     modalBackdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    // Focus close button for keyboard accessibility
     if (modalCloseBtn) {
       modalCloseBtn.focus();
     }
@@ -879,7 +906,6 @@ Tier 4 (90+ Days Default): Secondary recovery pipeline or collateral remediation
     return String(string).replace(/[&<>"']/g, s => entityMap[s]);
   }
 
-  // Open case study triggers
   document.querySelectorAll('.open-case-study').forEach(btn => {
     btn.addEventListener('click', () => {
       const proj = btn.getAttribute('data-project');
