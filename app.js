@@ -454,13 +454,7 @@ DIVIDE(
     const textColor = isDark ? '#94a3b8' : '#475569';
     const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)';
 
-    const activePalette = htmlRoot.getAttribute('data-palette') || 'lime';
-    const accentColors = {
-      lime: '#38bdf8',
-      coral: '#10b981',
-      purple: '#c084fc'
-    };
-    const currentAccent = accentColors[activePalette] || '#38bdf8';
+    const currentAccent = isDark ? '#38bdf8' : '#0284c7';
 
     const clonedChartData = JSON.parse(JSON.stringify(data.chartData));
     clonedChartData.datasets.forEach(ds => {
@@ -507,8 +501,10 @@ DIVIDE(
   function updateChartColors(theme) {
     if (!chartInstance) return;
     const isDark = theme !== 'light';
-    const textColor = isDark ? '#94a3b8' : '#475569';
-    const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)';
+    const textColor = isDark ? '#7a8296' : '#6b7487';
+    const gridColor = isDark ? 'rgba(238, 240, 245, 0.06)' : 'rgba(17, 24, 39, 0.06)';
+    const accent = isDark ? '#38bdf8' : '#0284c7';
+    chartInstance.data.datasets.forEach(ds => { ds.backgroundColor = accent; });
 
     if (chartInstance.options.scales.x) {
       chartInstance.options.scales.x.grid.color = gridColor;

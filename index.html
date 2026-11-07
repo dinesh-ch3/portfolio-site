@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-palette="lime">
+<html lang="en" data-theme="dark" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
   <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons & Chart.js -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -36,34 +36,18 @@
     <div class="header-container">
       <a href="#hero" class="brand-logo" aria-label="Dinesh Chittinedi Portfolio Home">
         <span class="logo-badge">CD</span>
-        <span class="brand-text">Dinesh <span class="brand-accent">Chittinedi</span></span>
+        <span class="brand-text">Dinesh Chittinedi</span>
       </a>
 
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#playground" class="nav-link">Live Data Lab</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#playground" class="nav-link">Data Lab</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <!-- Palette Switcher -->
-        <div class="palette-switcher" aria-label="Color Palette Switcher" title="Curated Accent Themes">
-          <button class="palette-pill active" data-palette-choice="lime" title="Electric Sky (Default)">
-            <span class="swatch swatch-lime"></span>
-            <span class="palette-name">Sky</span>
-          </button>
-          <button class="palette-pill" data-palette-choice="coral" title="Emerald Mint">
-            <span class="swatch swatch-coral"></span>
-            <span class="palette-name">Mint</span>
-          </button>
-          <button class="palette-pill" data-palette-choice="purple" title="Cosmic Violet">
-            <span class="swatch swatch-purple"></span>
-            <span class="palette-name">Violet</span>
-          </button>
-        </div>
-
         <!-- Theme Toggle -->
         <button id="themeToggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
           <i data-lucide="sun" class="sun-icon"></i>
@@ -77,7 +61,7 @@
         </a>
 
         <!-- Hire Me CTA -->
-        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        <a href="#contact" class="btn btn-sm btn-primary">Contact</a>
 
         <!-- Mobile Drawer Toggle -->
         <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
@@ -94,20 +78,7 @@
         <a href="#skills" class="mobile-link">Skills</a>
         <a href="#experience" class="mobile-link">Experience</a>
         <a href="#contact" class="mobile-link">Contact</a>
-        <div class="mobile-palette-strip">
-          <span class="mobile-palette-label">Accent Theme:</span>
-          <div class="palette-switcher mobile-palette">
-            <button class="palette-pill active" data-palette-choice="lime">
-              <span class="swatch swatch-lime"></span> Sky
-            </button>
-            <button class="palette-pill" data-palette-choice="coral">
-              <span class="swatch swatch-coral"></span> Mint
-            </button>
-            <button class="palette-pill" data-palette-choice="purple">
-              <span class="swatch swatch-purple"></span> Violet
-            </button>
-          </div>
-        </div>
+        
         <a href="Dinesh_Chittineedi_Web_Developer_Resume.pdf" download class="btn btn-secondary w-full mt-2">
           <i data-lucide="file-down" class="btn-icon-svg"></i> Download Resume PDF
         </a>
@@ -122,47 +93,46 @@
         <!-- Live Status Pill -->
         <div class="badge-status">
           <span class="pulse-dot"></span>
-          <span>Open to Web Dev &amp; Data Roles • Summer/Fall 2026</span>
+          <span>Available for engineering &amp; data roles · 2026</span>
         </div>
 
         <h1 class="hero-title">
-          Engineering Scalable Web Systems &amp; <span class="hero-highlight">Translating Complex Data into Impact</span>
+          Web applications and relational data systems
         </h1>
 
         <p class="hero-subtitle">
-          Hi, I'm <strong class="text-white">Dinesh Chittinedi</strong> &mdash; a results-oriented <strong>Web Developer</strong> &amp; <strong>Data Analyst</strong>. 
-          Specialized in architecting responsive web applications using <strong>React.js</strong>, <strong>modern JavaScript (ES6+)</strong>, and <strong>zero-library CSS</strong> with sub-second response times, coupled with rigorous <strong>SQL data pipelines</strong>, <strong>Python (Pandas, NumPy)</strong> exploratory analysis, and <strong>Power BI executive modeling</strong>.
+          Dinesh Chittinedi builds responsive web applications in <strong>React</strong> and <strong>JavaScript</strong>, backed by normalized <strong>SQL schemas</strong>, exploratory <strong>Python pipelines</strong>, and business intelligence models.
         </p>
 
         <!-- Key Metrics Grid -->
         <div class="hero-metrics-grid">
           <div class="metric-card">
             <span class="metric-value">10,000+</span>
-            <span class="metric-label">Clinical Records Managed</span>
+            <span class="metric-label">Clinical records managed</span>
           </div>
           <div class="metric-card">
             <span class="metric-value">&lt; 5 ms</span>
-            <span class="metric-label">Relational Query Latency</span>
+            <span class="metric-label">Relational query latency</span>
           </div>
           <div class="metric-card">
-            <span class="metric-value">60 FPS</span>
-            <span class="metric-label">Zero-Lib CSS UI Performance</span>
+            <span class="metric-value">60 fps</span>
+            <span class="metric-label">Interface render target</span>
           </div>
           <div class="metric-card">
             <span class="metric-value">400k+</span>
-            <span class="metric-label">Data Points Modeled &amp; Ingested</span>
+            <span class="metric-label">Data points modeled</span>
           </div>
         </div>
 
         <!-- Hero CTAs -->
         <div class="hero-cta-group">
           <a href="#projects" class="btn btn-lg btn-primary">
-            <span>Explore Case Studies</span>
+            <span>View case studies</span>
             <i data-lucide="arrow-down" class="btn-icon-svg"></i>
           </a>
           <a href="#playground" class="btn btn-lg btn-secondary">
-            <i data-lucide="sparkles" class="btn-icon-svg text-accent"></i>
-            <span>Interactive Data Lab</span>
+            <i data-lucide="terminal" class="btn-icon-svg"></i>
+            <span>Interactive data lab</span>
           </a>
           <div class="social-quick-links">
             <a href="https://github.com/dinesh-ch3" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile" aria-label="GitHub Profile">
@@ -179,30 +149,30 @@
 
         <!-- Toolkit & Ecosystem Strip -->
         <div class="hero-tech-strip">
-          <span class="tech-strip-label">Production Toolkit &amp; Tech Stack</span>
+          <span class="tech-strip-label">Core engineering stack</span>
           <div class="tech-strip-logos">
             <div class="tech-pill-badge" title="React 18 & Modern Web Architecture">
-              <i data-lucide="code" class="text-accent"></i>
+              <i data-lucide="code" ></i>
               <span>React.js</span>
             </div>
             <div class="tech-pill-badge" title="Modern JavaScript ES6+">
-              <i data-lucide="cpu" class="text-accent"></i>
+              <i data-lucide="cpu" ></i>
               <span>JavaScript ES6+</span>
             </div>
             <div class="tech-pill-badge" title="SQL (MySQL, PostgreSQL, CTEs, Window Functions)">
-              <i data-lucide="database" class="text-accent"></i>
+              <i data-lucide="database" ></i>
               <span>SQL (MySQL / Postgres)</span>
             </div>
             <div class="tech-pill-badge" title="Python (Pandas, NumPy, Seaborn)">
-              <i data-lucide="terminal" class="text-accent"></i>
+              <i data-lucide="terminal" ></i>
               <span>Python &amp; Pandas</span>
             </div>
             <div class="tech-pill-badge" title="Microsoft Power BI (DAX, Star Schema)">
-              <i data-lucide="bar-chart-3" class="text-accent"></i>
+              <i data-lucide="bar-chart-3" ></i>
               <span>Power BI &amp; DAX</span>
             </div>
             <div class="tech-pill-badge" title="Git & GitHub Version Control">
-              <i data-lucide="git-branch" class="text-accent"></i>
+              <i data-lucide="git-branch" ></i>
               <span>Git &amp; GitHub</span>
             </div>
           </div>
@@ -222,7 +192,7 @@
             <button class="terminal-tab-btn" data-hero-tab="sql">pipeline.sql</button>
             <button class="terminal-tab-btn" data-hero-tab="telemetry">telemetry.json</button>
           </div>
-          <span class="terminal-badge" id="heroTabBadge">LIVE STATE</span>
+          <span class="terminal-badge" id="heroTabBadge">Active</span>
         </div>
 
         <!-- Terminal Tab 1: Interactive Component Simulation -->
@@ -256,7 +226,7 @@
             <div>
               <div style="display:flex; justify-content:space-between; font-size:0.72rem; color:var(--text-secondary); margin-bottom:4px;">
                 <span>Department Capacity Allocation</span>
-                <span id="hicStatusText" style="color:var(--accent-primary); font-weight:600;">Optimal Load</span>
+                <span id="hicStatusText" style="color:var(--accent-primary); font-weight:600;">Optimal load</span>
               </div>
               <div class="hic-progress-bar">
                 <div class="hic-progress-fill" id="hicProgressFill" style="width: 42.5%;"></div>
@@ -325,10 +295,10 @@
   <section id="projects" class="section projects-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Production Work</span>
-        <h2 class="section-title">Engineered Case Studies</h2>
+        <span class="section-tag">Selected work</span>
+        <h2 class="section-title">Case studies and systems</h2>
         <p class="section-desc">
-          High-performance full-stack web applications and end-to-end data analytics pipelines built for speed, data integrity, and executive clarity.
+          Production web applications and end-to-end data analytics pipelines built for data integrity, query efficiency, and operational clarity.
         </p>
       </div>
 
@@ -676,10 +646,10 @@
   <section id="playground" class="section playground-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Interactive Workbench</span>
-        <h2 class="section-title">Live Data &amp; Analytics Lab</h2>
+        <span class="section-tag">Interactive workbench</span>
+        <h2 class="section-title">Live query and analytics laboratory</h2>
         <p class="section-desc">
-          Test drive live analytical queries and watch the data visualizer update dynamically. Real datasets, real logic, no static mockups.
+          Run analytical queries and observe live visualizer updates. Real datasets, query logic, and tabular outputs.
         </p>
       </div>
 
@@ -687,7 +657,7 @@
         <!-- Lab Query Selector Sidebar -->
         <div class="lab-controls">
           <div class="lab-control-header">
-            <i data-lucide="database" class="text-accent"></i>
+            <i data-lucide="database" ></i>
             <span>Select Query Scenario</span>
           </div>
 
@@ -780,10 +750,10 @@
   <section id="skills" class="section skills-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Competency Matrix</span>
-        <h2 class="section-title">Technical Skills &amp; Architecture</h2>
+        <span class="section-tag">Core competencies</span>
+        <h2 class="section-title">Technical capabilities</h2>
         <p class="section-desc">
-          Structured around modern engineering &amp; analytics workflows: low-latency UI construction, relational database hygiene, and executive decision intelligence.
+          Structured across responsive web development, relational database architecture, and business intelligence.
         </p>
       </div>
 
@@ -792,7 +762,7 @@
         <div class="skill-category-card">
           <div class="skill-card-header">
             <div class="skill-icon-wrapper" style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25);">
-              <i data-lucide="layout" class="text-accent"></i>
+              <i data-lucide="layout" ></i>
             </div>
             <div>
               <h3 class="skill-cat-title">Frontend &amp; Web Development</h3>
@@ -916,10 +886,10 @@
   <section id="experience" class="section experience-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Career Milestones</span>
-        <h2 class="section-title">Experience &amp; Education</h2>
+        <span class="section-tag">Timeline</span>
+        <h2 class="section-title">Experience and education</h2>
         <p class="section-desc">
-          Professional experience, formal academic grounding in Computer Science, and verified corporate simulations.
+          Practical experience, university training in Computer Science, and completed industry project simulations.
         </p>
       </div>
 
@@ -927,7 +897,7 @@
         <!-- Experience 1: InAmigos -->
         <div class="timeline-item">
           <div class="timeline-marker">
-            <i data-lucide="briefcase" class="text-accent" style="width:18px; height:18px;"></i>
+            <i data-lucide="briefcase"  style="width:18px; height:18px;"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -953,7 +923,7 @@
         <!-- Experience 2: BCG X Simulation -->
         <div class="timeline-item">
           <div class="timeline-marker">
-            <i data-lucide="layers" class="text-accent" style="width:18px; height:18px;"></i>
+            <i data-lucide="layers"  style="width:18px; height:18px;"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -979,7 +949,7 @@
         <!-- Experience 3: Tata Simulation -->
         <div class="timeline-item">
           <div class="timeline-marker">
-            <i data-lucide="cpu" class="text-accent" style="width:18px; height:18px;"></i>
+            <i data-lucide="cpu"  style="width:18px; height:18px;"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -1062,7 +1032,7 @@
       <!-- Certifications Block -->
       <div class="certifications-box">
         <h3 class="cert-title">
-          <i data-lucide="shield-check" class="text-accent"></i> Verified Certifications
+          <i data-lucide="shield-check" ></i> Verified Certifications
         </h3>
         <div class="cert-grid">
           <div class="cert-card">
@@ -1096,10 +1066,10 @@
     <div class="container">
       <div class="contact-card">
         <div class="contact-info">
-          <span class="section-tag">Let's Connect</span>
-          <h2 class="contact-title">Ready to Accelerate Your Engineering or Data Team</h2>
+          <span class="section-tag">Contact</span>
+          <h2 class="contact-title">Let's discuss an engineering or analytics role</h2>
           <p class="contact-subtitle">
-            I am actively interviewing for full-time <strong>Web Developer</strong>, <strong>React Frontend Engineer</strong>, and <strong>Data Analyst</strong> roles. Available immediately for remote opportunities across India &amp; worldwide, as well as on-site positions.
+            Currently interviewing for full-time Web Developer, React Frontend Engineer, and Data Analyst roles. Available for remote and on-site opportunities.
           </p>
 
           <div class="contact-details-list">
